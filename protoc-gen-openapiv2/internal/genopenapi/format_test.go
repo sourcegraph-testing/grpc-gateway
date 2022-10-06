@@ -52,7 +52,7 @@ func TestFormatEncode(t *testing.T) {
 	t.Parallel()
 
 	type contentDecoder interface {
-		Decode(v interface{}) error
+		Decode(v any) error
 	}
 
 	testCases := [...]struct {

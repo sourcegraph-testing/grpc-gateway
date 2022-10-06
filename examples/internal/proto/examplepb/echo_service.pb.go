@@ -515,7 +515,7 @@ func file_examples_internal_proto_examplepb_echo_service_proto_rawDescGZIP() []b
 }
 
 var file_examples_internal_proto_examplepb_echo_service_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_examples_internal_proto_examplepb_echo_service_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_echo_service_proto_goTypes = []any{
 	(*Embedded)(nil),              // 0: grpc.gateway.examples.internal.proto.examplepb.Embedded
 	(*SimpleMessage)(nil),         // 1: grpc.gateway.examples.internal.proto.examplepb.SimpleMessage
 	(*DynamicMessage)(nil),        // 2: grpc.gateway.examples.internal.proto.examplepb.DynamicMessage
@@ -554,7 +554,7 @@ func file_examples_internal_proto_examplepb_echo_service_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*Embedded); i {
 			case 0:
 				return &v.state
@@ -566,7 +566,7 @@ func file_examples_internal_proto_examplepb_echo_service_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*SimpleMessage); i {
 			case 0:
 				return &v.state
@@ -578,7 +578,7 @@ func file_examples_internal_proto_examplepb_echo_service_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*DynamicMessage); i {
 			case 0:
 				return &v.state
@@ -590,7 +590,7 @@ func file_examples_internal_proto_examplepb_echo_service_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*DynamicMessageUpdate); i {
 			case 0:
 				return &v.state
@@ -603,11 +603,11 @@ func file_examples_internal_proto_examplepb_echo_service_proto_init() {
 			}
 		}
 	}
-	file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[0].OneofWrappers = []interface{}{
+	file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[0].OneofWrappers = []any{
 		(*Embedded_Progress)(nil),
 		(*Embedded_Note)(nil),
 	}
-	file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[1].OneofWrappers = []interface{}{
+	file_examples_internal_proto_examplepb_echo_service_proto_msgTypes[1].OneofWrappers = []any{
 		(*SimpleMessage_LineNum)(nil),
 		(*SimpleMessage_Lang)(nil),
 		(*SimpleMessage_En)(nil),

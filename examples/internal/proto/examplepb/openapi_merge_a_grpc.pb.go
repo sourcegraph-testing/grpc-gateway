@@ -90,7 +90,7 @@ func RegisterServiceAServer(s grpc.ServiceRegistrar, srv ServiceAServer) {
 	s.RegisterService(&ServiceA_ServiceDesc, srv)
 }
 
-func _ServiceA_MethodOne_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ServiceA_MethodOne_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(InMessageA)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -102,13 +102,13 @@ func _ServiceA_MethodOne_Handler(srv interface{}, ctx context.Context, dec func(
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.examplepb.ServiceA/MethodOne",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ServiceAServer).MethodOne(ctx, req.(*InMessageA))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ServiceA_MethodTwo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ServiceA_MethodTwo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(OutMessageA)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -120,7 +120,7 @@ func _ServiceA_MethodTwo_Handler(srv interface{}, ctx context.Context, dec func(
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.examplepb.ServiceA/MethodTwo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ServiceAServer).MethodTwo(ctx, req.(*OutMessageA))
 	}
 	return interceptor(ctx, in, info, handler)
@@ -222,7 +222,7 @@ func RegisterServiceCServer(s grpc.ServiceRegistrar, srv ServiceCServer) {
 	s.RegisterService(&ServiceC_ServiceDesc, srv)
 }
 
-func _ServiceC_MethodOne_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ServiceC_MethodOne_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(InMessageA)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -234,13 +234,13 @@ func _ServiceC_MethodOne_Handler(srv interface{}, ctx context.Context, dec func(
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.examplepb.ServiceC/MethodOne",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ServiceCServer).MethodOne(ctx, req.(*InMessageA))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ServiceC_MethodTwo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ServiceC_MethodTwo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(OutMessageA)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -252,7 +252,7 @@ func _ServiceC_MethodTwo_Handler(srv interface{}, ctx context.Context, dec func(
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.examplepb.ServiceC/MethodTwo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ServiceCServer).MethodTwo(ctx, req.(*OutMessageA))
 	}
 	return interceptor(ctx, in, info, handler)

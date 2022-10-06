@@ -197,7 +197,7 @@ func (m *RawExample) UnmarshalJSON(data []byte) error {
 // by types to customize their behavior when being marshaled into a YAML
 // document. The returned value is marshaled in place of the original
 // value implementing Marshaler.
-func (e RawExample) MarshalYAML() (interface{}, error) {
+func (e RawExample) MarshalYAML() (any, error) {
 	// From docs, json.Unmarshal will store one of next types to data:
 	// - bool, for JSON booleans;
 	// - float64, for JSON numbers;
@@ -205,7 +205,7 @@ func (e RawExample) MarshalYAML() (interface{}, error) {
 	// - []interface{}, for JSON arrays;
 	// - map[string]interface{}, for JSON objects;
 	// - nil for JSON null.
-	var data interface{}
+	var data any
 	if err := json.Unmarshal(e, &data); err != nil {
 		return nil, err
 	}
@@ -229,10 +229,10 @@ type openapiResponsesObject map[string]openapiResponseObject
 
 // http://swagger.io/specification/#responseObject
 type openapiResponseObject struct {
-	Description string                 `json:"description" yaml:"description"`
-	Schema      openapiSchemaObject    `json:"schema" yaml:"schema"`
-	Examples    map[string]interface{} `json:"examples,omitempty" yaml:"examples,omitempty"`
-	Headers     openapiHeadersObject   `json:"headers,omitempty" yaml:"headers,omitempty"`
+	Description string               `json:"description" yaml:"description"`
+	Schema      openapiSchemaObject  `json:"schema" yaml:"schema"`
+	Examples    map[string]any       `json:"examples,omitempty" yaml:"examples,omitempty"`
+	Headers     openapiHeadersObject `json:"headers,omitempty" yaml:"headers,omitempty"`
 
 	extensions []extension `json:"-" yaml:"-"`
 }
@@ -250,13 +250,13 @@ type openapiHeaderObject struct {
 
 type keyVal struct {
 	Key   string
-	Value interface{}
+	Value any
 }
 
 type openapiSchemaObjectProperties []keyVal
 
-func (p openapiSchemaObjectProperties) MarshalYAML() (interface{}, error) {
-	m := make(map[string]interface{}, len(p))
+func (p openapiSchemaObjectProperties) MarshalYAML() (any, error) {
+	m := make(map[string]any, len(p))
 
 	for _, v := range p {
 		m[v.Key] = v.Value

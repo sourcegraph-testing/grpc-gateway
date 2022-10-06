@@ -308,7 +308,7 @@ func request_{{.Method.Service.GetName}}_{{.Method.GetName}}_{{.Index}}(ctx cont
 }
 `))
 
-	funcMap template.FuncMap = map[string]interface{}{
+	funcMap template.FuncMap = map[string]any{
 		"camelIdentifier": casing.CamelIdentifier,
 	}
 

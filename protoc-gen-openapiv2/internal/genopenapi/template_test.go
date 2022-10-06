@@ -3065,7 +3065,7 @@ func TestApplyTemplateProtobufAny(t *testing.T) {
 		if err != nil {
 			t.Errorf("protobufAny.Properties.MarshalJSON(), got error = %v", err)
 		}
-		var anyPropsMap map[string]interface{}
+		var anyPropsMap map[string]any
 		if err := json.Unmarshal(anyPropsJSON, &anyPropsMap); err != nil {
 			t.Errorf("json.Unmarshal(), got error = %v", err)
 		}
@@ -5033,10 +5033,10 @@ func TestUpdateOpenAPIDataFromComments(t *testing.T) {
 
 	tests := []struct {
 		descr                 string
-		openapiSwaggerObject  interface{}
+		openapiSwaggerObject  any
 		comments              string
 		expectedError         error
-		expectedOpenAPIObject interface{}
+		expectedOpenAPIObject any
 		useGoTemplate         bool
 	}{
 		{

@@ -12,7 +12,7 @@ import (
 )
 
 func loadGrpcAPIServiceFromYAML(yamlFileContents []byte, yamlSourceLogName string) (*apiconfig.GrpcAPIService, error) {
-	var yamlContents interface{}
+	var yamlContents any
 	err := yaml.Unmarshal(yamlFileContents, &yamlContents)
 	if err != nil {
 		return nil, fmt.Errorf("failed to parse gRPC API Configuration from YAML in '%v': %v", yamlSourceLogName, err)

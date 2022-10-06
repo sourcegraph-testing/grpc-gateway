@@ -206,7 +206,7 @@ func RegisterWrappersServiceServer(s grpc.ServiceRegistrar, srv WrappersServiceS
 	s.RegisterService(&WrappersService_ServiceDesc, srv)
 }
 
-func _WrappersService_Create_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_Create_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(Wrappers)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -218,13 +218,13 @@ func _WrappersService_Create_Handler(srv interface{}, ctx context.Context, dec f
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/Create",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).Create(ctx, req.(*Wrappers))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateStringValue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateStringValue_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(wrapperspb.StringValue)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -236,13 +236,13 @@ func _WrappersService_CreateStringValue_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateStringValue",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateStringValue(ctx, req.(*wrapperspb.StringValue))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateInt32Value_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateInt32Value_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(wrapperspb.Int32Value)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -254,13 +254,13 @@ func _WrappersService_CreateInt32Value_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateInt32Value",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateInt32Value(ctx, req.(*wrapperspb.Int32Value))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateInt64Value_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateInt64Value_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(wrapperspb.Int64Value)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -272,13 +272,13 @@ func _WrappersService_CreateInt64Value_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateInt64Value",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateInt64Value(ctx, req.(*wrapperspb.Int64Value))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateFloatValue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateFloatValue_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(wrapperspb.FloatValue)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -290,13 +290,13 @@ func _WrappersService_CreateFloatValue_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateFloatValue",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateFloatValue(ctx, req.(*wrapperspb.FloatValue))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateDoubleValue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateDoubleValue_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(wrapperspb.DoubleValue)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -308,13 +308,13 @@ func _WrappersService_CreateDoubleValue_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateDoubleValue",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateDoubleValue(ctx, req.(*wrapperspb.DoubleValue))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateBoolValue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateBoolValue_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(wrapperspb.BoolValue)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -326,13 +326,13 @@ func _WrappersService_CreateBoolValue_Handler(srv interface{}, ctx context.Conte
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateBoolValue",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateBoolValue(ctx, req.(*wrapperspb.BoolValue))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateUInt32Value_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateUInt32Value_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(wrapperspb.UInt32Value)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -344,13 +344,13 @@ func _WrappersService_CreateUInt32Value_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateUInt32Value",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateUInt32Value(ctx, req.(*wrapperspb.UInt32Value))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateUInt64Value_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateUInt64Value_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(wrapperspb.UInt64Value)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -362,13 +362,13 @@ func _WrappersService_CreateUInt64Value_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateUInt64Value",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateUInt64Value(ctx, req.(*wrapperspb.UInt64Value))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateBytesValue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateBytesValue_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(wrapperspb.BytesValue)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -380,13 +380,13 @@ func _WrappersService_CreateBytesValue_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateBytesValue",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateBytesValue(ctx, req.(*wrapperspb.BytesValue))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WrappersService_CreateEmpty_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WrappersService_CreateEmpty_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -398,7 +398,7 @@ func _WrappersService_CreateEmpty_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.WrappersService/CreateEmpty",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WrappersServiceServer).CreateEmpty(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)

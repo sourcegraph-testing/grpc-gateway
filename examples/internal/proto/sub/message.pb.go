@@ -98,7 +98,7 @@ func file_examples_internal_proto_sub_message_proto_rawDescGZIP() []byte {
 }
 
 var file_examples_internal_proto_sub_message_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_examples_internal_proto_sub_message_proto_goTypes = []interface{}{
+var file_examples_internal_proto_sub_message_proto_goTypes = []any{
 	(*StringMessage)(nil), // 0: grpc.gateway.examples.internal.proto.sub.StringMessage
 }
 var file_examples_internal_proto_sub_message_proto_depIdxs = []int32{
@@ -115,7 +115,7 @@ func file_examples_internal_proto_sub_message_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_sub_message_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_sub_message_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*StringMessage); i {
 			case 0:
 				return &v.state

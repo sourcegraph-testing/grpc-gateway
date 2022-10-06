@@ -122,7 +122,7 @@ func RegisterVisibilityRuleEchoServiceServer(s grpc.ServiceRegistrar, srv Visibi
 	s.RegisterService(&VisibilityRuleEchoService_ServiceDesc, srv)
 }
 
-func _VisibilityRuleEchoService_Echo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _VisibilityRuleEchoService_Echo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(VisibilityRuleSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -134,13 +134,13 @@ func _VisibilityRuleEchoService_Echo_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.VisibilityRuleEchoService/Echo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(VisibilityRuleEchoServiceServer).Echo(ctx, req.(*VisibilityRuleSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _VisibilityRuleEchoService_EchoInternal_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _VisibilityRuleEchoService_EchoInternal_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(VisibilityRuleSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -152,13 +152,13 @@ func _VisibilityRuleEchoService_EchoInternal_Handler(srv interface{}, ctx contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.VisibilityRuleEchoService/EchoInternal",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(VisibilityRuleEchoServiceServer).EchoInternal(ctx, req.(*VisibilityRuleSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _VisibilityRuleEchoService_EchoPreview_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _VisibilityRuleEchoService_EchoPreview_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(VisibilityRuleSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -170,13 +170,13 @@ func _VisibilityRuleEchoService_EchoPreview_Handler(srv interface{}, ctx context
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.VisibilityRuleEchoService/EchoPreview",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(VisibilityRuleEchoServiceServer).EchoPreview(ctx, req.(*VisibilityRuleSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _VisibilityRuleEchoService_EchoInternalAndPreview_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _VisibilityRuleEchoService_EchoInternalAndPreview_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(VisibilityRuleSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -188,7 +188,7 @@ func _VisibilityRuleEchoService_EchoInternalAndPreview_Handler(srv interface{}, 
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.VisibilityRuleEchoService/EchoInternalAndPreview",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(VisibilityRuleEchoServiceServer).EchoInternalAndPreview(ctx, req.(*VisibilityRuleSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
@@ -276,7 +276,7 @@ func RegisterVisibilityRuleInternalEchoServiceServer(s grpc.ServiceRegistrar, sr
 	s.RegisterService(&VisibilityRuleInternalEchoService_ServiceDesc, srv)
 }
 
-func _VisibilityRuleInternalEchoService_Echo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _VisibilityRuleInternalEchoService_Echo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(VisibilityRuleSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -288,7 +288,7 @@ func _VisibilityRuleInternalEchoService_Echo_Handler(srv interface{}, ctx contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.VisibilityRuleInternalEchoService/Echo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(VisibilityRuleInternalEchoServiceServer).Echo(ctx, req.(*VisibilityRuleSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)

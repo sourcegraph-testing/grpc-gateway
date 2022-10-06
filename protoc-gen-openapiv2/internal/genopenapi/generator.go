@@ -104,11 +104,11 @@ func (so openapiSwaggerObject) MarshalJSON() ([]byte, error) {
 //	type: string
 //
 // Use generics when the project will be upgraded to go 1.18+.
-func (so openapiSwaggerObject) MarshalYAML() (interface{}, error) {
+func (so openapiSwaggerObject) MarshalYAML() (any, error) {
 	type Alias openapiSwaggerObject
 
 	return struct {
-		Extension map[string]interface{} `yaml:",inline"`
+		Extension map[string]any `yaml:",inline"`
 		Alias     `yaml:",inline"`
 	}{
 		Extension: extensionsToMap(so.extensions),
@@ -121,11 +121,11 @@ func (so openapiInfoObject) MarshalJSON() ([]byte, error) {
 	return extensionMarshalJSON(alias(so), so.extensions)
 }
 
-func (so openapiInfoObject) MarshalYAML() (interface{}, error) {
+func (so openapiInfoObject) MarshalYAML() (any, error) {
 	type Alias openapiInfoObject
 
 	return struct {
-		Extension map[string]interface{} `yaml:",inline"`
+		Extension map[string]any `yaml:",inline"`
 		Alias     `yaml:",inline"`
 	}{
 		Extension: extensionsToMap(so.extensions),
@@ -138,11 +138,11 @@ func (so openapiSecuritySchemeObject) MarshalJSON() ([]byte, error) {
 	return extensionMarshalJSON(alias(so), so.extensions)
 }
 
-func (so openapiSecuritySchemeObject) MarshalYAML() (interface{}, error) {
+func (so openapiSecuritySchemeObject) MarshalYAML() (any, error) {
 	type Alias openapiSecuritySchemeObject
 
 	return struct {
-		Extension map[string]interface{} `yaml:",inline"`
+		Extension map[string]any `yaml:",inline"`
 		Alias     `yaml:",inline"`
 	}{
 		Extension: extensionsToMap(so.extensions),
@@ -155,11 +155,11 @@ func (so openapiOperationObject) MarshalJSON() ([]byte, error) {
 	return extensionMarshalJSON(alias(so), so.extensions)
 }
 
-func (so openapiOperationObject) MarshalYAML() (interface{}, error) {
+func (so openapiOperationObject) MarshalYAML() (any, error) {
 	type Alias openapiOperationObject
 
 	return struct {
-		Extension map[string]interface{} `yaml:",inline"`
+		Extension map[string]any `yaml:",inline"`
 		Alias     `yaml:",inline"`
 	}{
 		Extension: extensionsToMap(so.extensions),
@@ -172,11 +172,11 @@ func (so openapiResponseObject) MarshalJSON() ([]byte, error) {
 	return extensionMarshalJSON(alias(so), so.extensions)
 }
 
-func (so openapiResponseObject) MarshalYAML() (interface{}, error) {
+func (so openapiResponseObject) MarshalYAML() (any, error) {
 	type Alias openapiResponseObject
 
 	return struct {
-		Extension map[string]interface{} `yaml:",inline"`
+		Extension map[string]any `yaml:",inline"`
 		Alias     `yaml:",inline"`
 	}{
 		Extension: extensionsToMap(so.extensions),
@@ -189,11 +189,11 @@ func (so openapiSchemaObject) MarshalJSON() ([]byte, error) {
 	return extensionMarshalJSON(alias(so), so.extensions)
 }
 
-func (so openapiSchemaObject) MarshalYAML() (interface{}, error) {
+func (so openapiSchemaObject) MarshalYAML() (any, error) {
 	type Alias openapiSchemaObject
 
 	return struct {
-		Extension map[string]interface{} `yaml:",inline"`
+		Extension map[string]any `yaml:",inline"`
 		Alias     `yaml:",inline"`
 	}{
 		Extension: extensionsToMap(so.extensions),
@@ -206,11 +206,11 @@ func (so openapiParameterObject) MarshalJSON() ([]byte, error) {
 	return extensionMarshalJSON(alias(so), so.extensions)
 }
 
-func (so openapiParameterObject) MarshalYAML() (interface{}, error) {
+func (so openapiParameterObject) MarshalYAML() (any, error) {
 	type Alias openapiParameterObject
 
 	return struct {
-		Extension map[string]interface{} `yaml:",inline"`
+		Extension map[string]any `yaml:",inline"`
 		Alias     `yaml:",inline"`
 	}{
 		Extension: extensionsToMap(so.extensions),
@@ -218,7 +218,7 @@ func (so openapiParameterObject) MarshalYAML() (interface{}, error) {
 	}, nil
 }
 
-func extensionMarshalJSON(so interface{}, extensions []extension) ([]byte, error) {
+func extensionMarshalJSON(so any, extensions []extension) ([]byte, error) {
 	// To append arbitrary keys to the struct we'll render into json,
 	// we're creating another struct that embeds the original one, and
 	// its extra fields:
@@ -362,8 +362,8 @@ func AddErrorDefs(reg *descriptor.Registry) error {
 	})
 }
 
-func extensionsToMap(extensions []extension) map[string]interface{} {
-	m := make(map[string]interface{}, len(extensions))
+func extensionsToMap(extensions []extension) map[string]any {
+	m := make(map[string]any, len(extensions))
 
 	for _, v := range extensions {
 		m[v.key] = RawExample(v.value)

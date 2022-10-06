@@ -282,7 +282,7 @@ func file_examples_internal_proto_examplepb_wrappers_proto_rawDescGZIP() []byte 
 }
 
 var file_examples_internal_proto_examplepb_wrappers_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_examples_internal_proto_examplepb_wrappers_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_wrappers_proto_goTypes = []any{
 	(*Wrappers)(nil),               // 0: grpc.gateway.examples.internal.proto.examplepb.Wrappers
 	(*wrapperspb.StringValue)(nil), // 1: google.protobuf.StringValue
 	(*wrapperspb.Int32Value)(nil),  // 2: google.protobuf.Int32Value
@@ -340,7 +340,7 @@ func file_examples_internal_proto_examplepb_wrappers_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_examplepb_wrappers_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_wrappers_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*Wrappers); i {
 			case 0:
 				return &v.state

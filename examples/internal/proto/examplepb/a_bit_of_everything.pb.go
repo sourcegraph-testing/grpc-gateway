@@ -2586,7 +2586,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_rawDescGZI
 
 var file_examples_internal_proto_examplepb_a_bit_of_everything_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes = make([]protoimpl.MessageInfo, 17)
-var file_examples_internal_proto_examplepb_a_bit_of_everything_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_a_bit_of_everything_proto_goTypes = []any{
 	(NumericEnum)(0),                      // 0: grpc.gateway.examples.internal.proto.examplepb.NumericEnum
 	(SnakeCaseEnum)(0),                    // 1: grpc.gateway.examples.internal.proto.examplepb.snake_case_enum
 	(SnakeCase_0Enum)(0),                  // 2: grpc.gateway.examples.internal.proto.examplepb.snake_case_0_enum
@@ -2734,7 +2734,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*ErrorResponse); i {
 			case 0:
 				return &v.state
@@ -2746,7 +2746,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*ErrorObject); i {
 			case 0:
 				return &v.state
@@ -2758,7 +2758,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*ABitOfEverything); i {
 			case 0:
 				return &v.state
@@ -2770,7 +2770,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*ABitOfEverythingRepeated); i {
 			case 0:
 				return &v.state
@@ -2782,7 +2782,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*CheckStatusResponse); i {
 			case 0:
 				return &v.state
@@ -2794,7 +2794,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*Body); i {
 			case 0:
 				return &v.state
@@ -2806,7 +2806,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*MessageWithBody); i {
 			case 0:
 				return &v.state
@@ -2818,7 +2818,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateV2Request); i {
 			case 0:
 				return &v.state
@@ -2830,7 +2830,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*Book); i {
 			case 0:
 				return &v.state
@@ -2842,7 +2842,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*CreateBookRequest); i {
 			case 0:
 				return &v.state
@@ -2854,7 +2854,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateBookRequest); i {
 			case 0:
 				return &v.state
@@ -2866,7 +2866,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[11].Exporter = func(v any, i int) any {
 			switch v := v.(*SnakeEnumRequest); i {
 			case 0:
 				return &v.state
@@ -2878,7 +2878,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[12].Exporter = func(v any, i int) any {
 			switch v := v.(*SnakeEnumResponse); i {
 			case 0:
 				return &v.state
@@ -2890,7 +2890,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[13].Exporter = func(v any, i int) any {
 			switch v := v.(*ABitOfEverything_Nested); i {
 			case 0:
 				return &v.state
@@ -2903,7 +2903,7 @@ func file_examples_internal_proto_examplepb_a_bit_of_everything_proto_init() {
 			}
 		}
 	}
-	file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[2].OneofWrappers = []interface{}{
+	file_examples_internal_proto_examplepb_a_bit_of_everything_proto_msgTypes[2].OneofWrappers = []any{
 		(*ABitOfEverything_OneofEmpty)(nil),
 		(*ABitOfEverything_OneofString)(nil),
 	}

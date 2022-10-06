@@ -2037,7 +2037,7 @@ func processHeaders(inputHdrs map[string]*openapi_options.Header) (openapiHeader
 //
 // If there is no 'Summary', the same behavior will be attempted on 'Title',
 // but only if the last character is not a period.
-func updateOpenAPIDataFromComments(reg *descriptor.Registry, swaggerObject interface{}, data interface{}, comment string, isPackageObject bool) error {
+func updateOpenAPIDataFromComments(reg *descriptor.Registry, swaggerObject any, data any, comment string, isPackageObject bool) error {
 	if len(comment) == 0 {
 		return nil
 	}
@@ -2183,7 +2183,7 @@ func protoComments(reg *descriptor.Registry, file *descriptor.File, outers []str
 	return ""
 }
 
-func goTemplateComments(comment string, data interface{}, reg *descriptor.Registry) string {
+func goTemplateComments(comment string, data any, reg *descriptor.Registry) string {
 	var temp bytes.Buffer
 	tpl, err := template.New("").Funcs(template.FuncMap{
 		// Allows importing documentation from a file
@@ -2551,7 +2551,7 @@ func protoJSONSchemaToOpenAPISchemaCore(j *openapi_options.JSONSchema, reg *desc
 	return ret
 }
 
-func updateswaggerObjectFromJSONSchema(s *openapiSchemaObject, j *openapi_options.JSONSchema, reg *descriptor.Registry, data interface{}) {
+func updateswaggerObjectFromJSONSchema(s *openapiSchemaObject, j *openapi_options.JSONSchema, reg *descriptor.Registry, data any) {
 	s.Title = j.GetTitle()
 	s.Description = j.GetDescription()
 	if reg.GetUseGoTemplate() {
@@ -2645,7 +2645,7 @@ func updateSwaggerObjectFromFieldBehavior(s *openapiSchemaObject, j []annotation
 	}
 }
 
-func openapiSchemaFromProtoSchema(s *openapi_options.Schema, reg *descriptor.Registry, refs refMap, data interface{}) openapiSchemaObject {
+func openapiSchemaFromProtoSchema(s *openapi_options.Schema, reg *descriptor.Registry, refs refMap, data any) openapiSchemaObject {
 	ret := openapiSchemaObject{
 		ExternalDocs: protoExternalDocumentationToOpenAPIExternalDocumentation(s.GetExternalDocs(), reg, data),
 	}
@@ -2660,11 +2660,11 @@ func openapiSchemaFromProtoSchema(s *openapi_options.Schema, reg *descriptor.Reg
 	return ret
 }
 
-func openapiExamplesFromProtoExamples(in map[string]string) map[string]interface{} {
+func openapiExamplesFromProtoExamples(in map[string]string) map[string]any {
 	if len(in) == 0 {
 		return nil
 	}
-	out := make(map[string]interface{})
+	out := make(map[string]any)
 	for mimeType, exampleStr := range in {
 		switch mimeType {
 		case "application/json":
@@ -2714,7 +2714,7 @@ func protoJSONSchemaTypeToFormat(in []openapi_options.JSONSchema_JSONSchemaSimpl
 	}
 }
 
-func protoExternalDocumentationToOpenAPIExternalDocumentation(in *openapi_options.ExternalDocumentation, reg *descriptor.Registry, data interface{}) *openapiExternalDocumentationObject {
+func protoExternalDocumentationToOpenAPIExternalDocumentation(in *openapi_options.ExternalDocumentation, reg *descriptor.Registry, data any) *openapiExternalDocumentationObject {
 	if in == nil {
 		return nil
 	}

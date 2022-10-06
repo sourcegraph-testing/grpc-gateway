@@ -359,7 +359,7 @@ func file_examples_internal_proto_examplepb_unannotated_echo_service_proto_rawDe
 }
 
 var file_examples_internal_proto_examplepb_unannotated_echo_service_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_examples_internal_proto_examplepb_unannotated_echo_service_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_unannotated_echo_service_proto_goTypes = []any{
 	(*UnannotatedEmbedded)(nil),      // 0: grpc.gateway.examples.internal.proto.examplepb.UnannotatedEmbedded
 	(*UnannotatedSimpleMessage)(nil), // 1: grpc.gateway.examples.internal.proto.examplepb.UnannotatedSimpleMessage
 	(*durationpb.Duration)(nil),      // 2: google.protobuf.Duration
@@ -387,7 +387,7 @@ func file_examples_internal_proto_examplepb_unannotated_echo_service_proto_init(
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_examplepb_unannotated_echo_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_unannotated_echo_service_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*UnannotatedEmbedded); i {
 			case 0:
 				return &v.state
@@ -399,7 +399,7 @@ func file_examples_internal_proto_examplepb_unannotated_echo_service_proto_init(
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_unannotated_echo_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_unannotated_echo_service_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*UnannotatedSimpleMessage); i {
 			case 0:
 				return &v.state
@@ -412,11 +412,11 @@ func file_examples_internal_proto_examplepb_unannotated_echo_service_proto_init(
 			}
 		}
 	}
-	file_examples_internal_proto_examplepb_unannotated_echo_service_proto_msgTypes[0].OneofWrappers = []interface{}{
+	file_examples_internal_proto_examplepb_unannotated_echo_service_proto_msgTypes[0].OneofWrappers = []any{
 		(*UnannotatedEmbedded_Progress)(nil),
 		(*UnannotatedEmbedded_Note)(nil),
 	}
-	file_examples_internal_proto_examplepb_unannotated_echo_service_proto_msgTypes[1].OneofWrappers = []interface{}{
+	file_examples_internal_proto_examplepb_unannotated_echo_service_proto_msgTypes[1].OneofWrappers = []any{
 		(*UnannotatedSimpleMessage_LineNum)(nil),
 		(*UnannotatedSimpleMessage_Lang)(nil),
 		(*UnannotatedSimpleMessage_En)(nil),

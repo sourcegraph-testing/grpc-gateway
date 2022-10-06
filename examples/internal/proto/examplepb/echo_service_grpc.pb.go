@@ -140,7 +140,7 @@ func RegisterEchoServiceServer(s grpc.ServiceRegistrar, srv EchoServiceServer) {
 	s.RegisterService(&EchoService_ServiceDesc, srv)
 }
 
-func _EchoService_Echo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _EchoService_Echo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -152,13 +152,13 @@ func _EchoService_Echo_Handler(srv interface{}, ctx context.Context, dec func(in
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.EchoService/Echo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(EchoServiceServer).Echo(ctx, req.(*SimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _EchoService_EchoBody_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _EchoService_EchoBody_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -170,13 +170,13 @@ func _EchoService_EchoBody_Handler(srv interface{}, ctx context.Context, dec fun
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.EchoService/EchoBody",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(EchoServiceServer).EchoBody(ctx, req.(*SimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _EchoService_EchoDelete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _EchoService_EchoDelete_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -188,13 +188,13 @@ func _EchoService_EchoDelete_Handler(srv interface{}, ctx context.Context, dec f
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.EchoService/EchoDelete",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(EchoServiceServer).EchoDelete(ctx, req.(*SimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _EchoService_EchoPatch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _EchoService_EchoPatch_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DynamicMessageUpdate)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -206,13 +206,13 @@ func _EchoService_EchoPatch_Handler(srv interface{}, ctx context.Context, dec fu
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.EchoService/EchoPatch",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(EchoServiceServer).EchoPatch(ctx, req.(*DynamicMessageUpdate))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _EchoService_EchoUnauthorized_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _EchoService_EchoUnauthorized_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -224,7 +224,7 @@ func _EchoService_EchoUnauthorized_Handler(srv interface{}, ctx context.Context,
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.EchoService/EchoUnauthorized",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(EchoServiceServer).EchoUnauthorized(ctx, req.(*SimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)

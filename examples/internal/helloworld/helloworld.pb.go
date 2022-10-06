@@ -284,7 +284,7 @@ func file_examples_internal_helloworld_helloworld_proto_rawDescGZIP() []byte {
 }
 
 var file_examples_internal_helloworld_helloworld_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_examples_internal_helloworld_helloworld_proto_goTypes = []interface{}{
+var file_examples_internal_helloworld_helloworld_proto_goTypes = []any{
 	(*HelloRequest)(nil),           // 0: grpc.gateway.examples.internal.helloworld.HelloRequest
 	(*HelloReply)(nil),             // 1: grpc.gateway.examples.internal.helloworld.HelloReply
 	(*wrapperspb.StringValue)(nil), // 2: google.protobuf.StringValue
@@ -322,7 +322,7 @@ func file_examples_internal_helloworld_helloworld_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_helloworld_helloworld_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_helloworld_helloworld_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*HelloRequest); i {
 			case 0:
 				return &v.state
@@ -334,7 +334,7 @@ func file_examples_internal_helloworld_helloworld_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_helloworld_helloworld_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_helloworld_helloworld_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*HelloReply); i {
 			case 0:
 				return &v.state

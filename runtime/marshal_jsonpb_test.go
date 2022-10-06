@@ -510,7 +510,7 @@ func TestJSONPbDecoderUnknownField(t *testing.T) {
 
 var (
 	fieldFixtures = []struct {
-		data          interface{}
+		data          any
 		json          string
 		skipUnmarshal bool
 	}{
@@ -669,7 +669,7 @@ var (
 )
 
 func TestJSONPbUnmarshalNullField(t *testing.T) {
-	var out map[string]interface{}
+	var out map[string]any
 
 	const json = `{"foo": null}`
 	marshaler := &runtime.JSONPb{}
@@ -689,15 +689,15 @@ func TestJSONPbUnmarshalNullField(t *testing.T) {
 func TestJSONPbMarshalResponseBodies(t *testing.T) {
 	marshaler := &runtime.JSONPb{}
 	for i, spec := range []struct {
-		input           interface{}
+		input           any
 		emitUnpopulated bool
-		verifier        func(*testing.T, interface{}, []byte)
+		verifier        func(*testing.T, any, []byte)
 	}{
 		{
 			input: &examplepb.ResponseBodyOut{
 				Response: &examplepb.ResponseBodyOut_Response{Data: "abcdef"},
 			},
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out examplepb.ResponseBodyOut
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -712,7 +712,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		{
 			emitUnpopulated: true,
 			input:           &examplepb.ResponseBodyOut{},
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out examplepb.ResponseBodyOut
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -726,7 +726,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		},
 		{
 			input: &examplepb.RepeatedResponseBodyOut_Response{},
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out examplepb.RepeatedResponseBodyOut_Response
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -741,7 +741,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		{
 			emitUnpopulated: true,
 			input:           &examplepb.RepeatedResponseBodyOut_Response{},
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out examplepb.RepeatedResponseBodyOut_Response
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -755,7 +755,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		},
 		{
 			input: ([]*examplepb.RepeatedResponseBodyOut_Response)(nil),
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out []*examplepb.RepeatedResponseBodyOut_Response
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -770,7 +770,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		{
 			emitUnpopulated: true,
 			input:           ([]*examplepb.RepeatedResponseBodyOut_Response)(nil),
-			verifier: func(t *testing.T, _ interface{}, json []byte) {
+			verifier: func(t *testing.T, _ any, json []byte) {
 				var out []*examplepb.RepeatedResponseBodyOut_Response
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -784,7 +784,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		},
 		{
 			input: []*examplepb.RepeatedResponseBodyOut_Response{},
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out []*examplepb.RepeatedResponseBodyOut_Response
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -798,7 +798,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		},
 		{
 			input: []string{"something"},
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out []string
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -812,7 +812,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		},
 		{
 			input: []string{},
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out []string
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -826,7 +826,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		},
 		{
 			input: ([]string)(nil),
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out []string
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -841,7 +841,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 		{
 			emitUnpopulated: true,
 			input:           ([]string)(nil),
-			verifier: func(t *testing.T, _ interface{}, json []byte) {
+			verifier: func(t *testing.T, _ any, json []byte) {
 				var out []string
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -861,7 +861,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 					Type: examplepb.RepeatedResponseBodyOut_Response_A,
 				},
 			},
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out []*examplepb.RepeatedResponseBodyOut_Response
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
@@ -882,7 +882,7 @@ func TestJSONPbMarshalResponseBodies(t *testing.T) {
 					Type: examplepb.RepeatedResponseBodyOut_Response_B,
 				},
 			},
-			verifier: func(t *testing.T, input interface{}, json []byte) {
+			verifier: func(t *testing.T, input any, json []byte) {
 				var out []*examplepb.RepeatedResponseBodyOut_Response
 				err := marshaler.Unmarshal(json, &out)
 				if err != nil {
