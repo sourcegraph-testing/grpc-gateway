@@ -129,7 +129,7 @@ func RegisterResponseBodyServiceServer(s grpc.ServiceRegistrar, srv ResponseBody
 	s.RegisterService(&ResponseBodyService_ServiceDesc, srv)
 }
 
-func _ResponseBodyService_GetResponseBody_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ResponseBodyService_GetResponseBody_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ResponseBodyIn)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -141,13 +141,13 @@ func _ResponseBodyService_GetResponseBody_Handler(srv interface{}, ctx context.C
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ResponseBodyService/GetResponseBody",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ResponseBodyServiceServer).GetResponseBody(ctx, req.(*ResponseBodyIn))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ResponseBodyService_ListResponseBodies_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ResponseBodyService_ListResponseBodies_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ResponseBodyIn)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -159,13 +159,13 @@ func _ResponseBodyService_ListResponseBodies_Handler(srv interface{}, ctx contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ResponseBodyService/ListResponseBodies",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ResponseBodyServiceServer).ListResponseBodies(ctx, req.(*ResponseBodyIn))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ResponseBodyService_ListResponseStrings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ResponseBodyService_ListResponseStrings_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ResponseBodyIn)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -177,13 +177,13 @@ func _ResponseBodyService_ListResponseStrings_Handler(srv interface{}, ctx conte
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ResponseBodyService/ListResponseStrings",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ResponseBodyServiceServer).ListResponseStrings(ctx, req.(*ResponseBodyIn))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ResponseBodyService_GetResponseBodyStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _ResponseBodyService_GetResponseBodyStream_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(ResponseBodyIn)
 	if err := stream.RecvMsg(m); err != nil {
 		return err

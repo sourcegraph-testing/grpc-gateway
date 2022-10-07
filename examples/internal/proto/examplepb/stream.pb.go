@@ -88,7 +88,7 @@ var file_examples_internal_proto_examplepb_stream_proto_rawDesc = []byte{
 	0x61, 0x6d, 0x70, 0x6c, 0x65, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
-var file_examples_internal_proto_examplepb_stream_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_stream_proto_goTypes = []any{
 	(*ABitOfEverything)(nil),  // 0: grpc.gateway.examples.internal.proto.examplepb.ABitOfEverything
 	(*emptypb.Empty)(nil),     // 1: google.protobuf.Empty
 	(*sub.StringMessage)(nil), // 2: grpc.gateway.examples.internal.proto.sub.StringMessage

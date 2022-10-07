@@ -309,26 +309,25 @@ func (SecurityScheme_Flow) EnumDescriptor() ([]byte, []int) {
 //
 // Example:
 //
-//  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
-//    info: {
-//      title: "Echo API";
-//      version: "1.0";
-//      description: "";
-//      contact: {
-//        name: "gRPC-Gateway project";
-//        url: "https://github.com/grpc-ecosystem/grpc-gateway";
-//        email: "none@example.com";
-//      };
-//      license: {
-//        name: "BSD 3-Clause License";
-//        url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
-//      };
-//    };
-//    schemes: HTTPS;
-//    consumes: "application/json";
-//    produces: "application/json";
-//  };
-//
+//	option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+//	  info: {
+//	    title: "Echo API";
+//	    version: "1.0";
+//	    description: "";
+//	    contact: {
+//	      name: "gRPC-Gateway project";
+//	      url: "https://github.com/grpc-ecosystem/grpc-gateway";
+//	      email: "none@example.com";
+//	    };
+//	    license: {
+//	      name: "BSD 3-Clause License";
+//	      url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
+//	    };
+//	  };
+//	  schemes: HTTPS;
+//	  consumes: "application/json";
+//	  produces: "application/json";
+//	};
 type Swagger struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -505,25 +504,25 @@ func (x *Swagger) GetExtensions() map[string]*structpb.Value {
 //
 // Example:
 //
-//  service EchoService {
-//    rpc Echo(SimpleMessage) returns (SimpleMessage) {
-//      option (google.api.http) = {
-//        get: "/v1/example/echo/{id}"
-//      };
+//	service EchoService {
+//	  rpc Echo(SimpleMessage) returns (SimpleMessage) {
+//	    option (google.api.http) = {
+//	      get: "/v1/example/echo/{id}"
+//	    };
 //
-//      option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
-//        summary: "Get a message.";
-//        operation_id: "getMessage";
-//        tags: "echo";
-//        responses: {
-//          key: "200"
-//            value: {
-//            description: "OK";
-//          }
-//        }
-//      };
-//    }
-//  }
+//	    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+//	      summary: "Get a message.";
+//	      operation_id: "getMessage";
+//	      tags: "echo";
+//	      responses: {
+//	        key: "200"
+//	          value: {
+//	          description: "OK";
+//	        }
+//	      }
+//	    };
+//	  }
+//	}
 type Operation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -691,7 +690,6 @@ func (x *Operation) GetExtensions() map[string]*structpb.Value {
 // `Header` is a representation of OpenAPI v2 specification's Header object.
 //
 // See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#headerObject
-//
 type Header struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -781,7 +779,6 @@ func (x *Header) GetPattern() string {
 // `Response` is a representation of OpenAPI v2 specification's Response object.
 //
 // See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#responseObject
-//
 type Response struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -876,24 +873,23 @@ func (x *Response) GetExtensions() map[string]*structpb.Value {
 //
 // Example:
 //
-//  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
-//    info: {
-//      title: "Echo API";
-//      version: "1.0";
-//      description: "";
-//      contact: {
-//        name: "gRPC-Gateway project";
-//        url: "https://github.com/grpc-ecosystem/grpc-gateway";
-//        email: "none@example.com";
-//      };
-//      license: {
-//        name: "BSD 3-Clause License";
-//        url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
-//      };
-//    };
-//    ...
-//  };
-//
+//	option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+//	  info: {
+//	    title: "Echo API";
+//	    version: "1.0";
+//	    description: "";
+//	    contact: {
+//	      name: "gRPC-Gateway project";
+//	      url: "https://github.com/grpc-ecosystem/grpc-gateway";
+//	      email: "none@example.com";
+//	    };
+//	    license: {
+//	      name: "BSD 3-Clause License";
+//	      url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
+//	    };
+//	  };
+//	  ...
+//	};
 type Info struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1003,19 +999,18 @@ func (x *Info) GetExtensions() map[string]*structpb.Value {
 //
 // Example:
 //
-//  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
-//    info: {
-//      ...
-//      contact: {
-//        name: "gRPC-Gateway project";
-//        url: "https://github.com/grpc-ecosystem/grpc-gateway";
-//        email: "none@example.com";
-//      };
-//      ...
-//    };
-//    ...
-//  };
-//
+//	option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+//	  info: {
+//	    ...
+//	    contact: {
+//	      name: "gRPC-Gateway project";
+//	      url: "https://github.com/grpc-ecosystem/grpc-gateway";
+//	      email: "none@example.com";
+//	    };
+//	    ...
+//	  };
+//	  ...
+//	};
 type Contact struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1090,18 +1085,17 @@ func (x *Contact) GetEmail() string {
 //
 // Example:
 //
-//  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
-//    info: {
-//      ...
-//      license: {
-//        name: "BSD 3-Clause License";
-//        url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
-//      };
-//      ...
-//    };
-//    ...
-//  };
-//
+//	option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+//	  info: {
+//	    ...
+//	    license: {
+//	      name: "BSD 3-Clause License";
+//	      url: "https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt";
+//	    };
+//	    ...
+//	  };
+//	  ...
+//	};
 type License struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1166,15 +1160,14 @@ func (x *License) GetUrl() string {
 //
 // Example:
 //
-//  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
-//    ...
-//    external_docs: {
-//      description: "More about gRPC-Gateway";
-//      url: "https://github.com/grpc-ecosystem/grpc-gateway";
-//    }
-//    ...
-//  };
-//
+//	option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+//	  ...
+//	  external_docs: {
+//	    description: "More about gRPC-Gateway";
+//	    url: "https://github.com/grpc-ecosystem/grpc-gateway";
+//	  }
+//	  ...
+//	};
 type ExternalDocumentation struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1237,7 +1230,6 @@ func (x *ExternalDocumentation) GetUrl() string {
 // `Schema` is a representation of OpenAPI v2 specification's Schema object.
 //
 // See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
-//
 type Schema struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1342,22 +1334,21 @@ func (x *Schema) GetExample() string {
 //
 // Example:
 //
-//  message SimpleMessage {
-//    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-//      json_schema: {
-//        title: "SimpleMessage"
-//        description: "A simple message."
-//        required: ["id"]
-//      }
-//    };
+//	message SimpleMessage {
+//	  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+//	    json_schema: {
+//	      title: "SimpleMessage"
+//	      description: "A simple message."
+//	      required: ["id"]
+//	    }
+//	  };
 //
-//    // Id represents the message identifier.
-//    string id = 1; [
-//        (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-//          description: "The unique identifier of the simple message."
-//        }];
-//  }
-//
+//	  // Id represents the message identifier.
+//	  string id = 1; [
+//	      (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+//	        description: "The unique identifier of the simple message."
+//	      }];
+//	}
 type JSONSchema struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1627,7 +1618,6 @@ func (x *JSONSchema) GetExtensions() map[string]*structpb.Value {
 // `Tag` is a representation of OpenAPI v2 specification's Tag object.
 //
 // See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#tagObject
-//
 type Tag struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -2573,7 +2563,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_rawDescGZIP() []byte {
 
 var file_protoc_gen_openapiv2_options_openapiv2_proto_enumTypes = make([]protoimpl.EnumInfo, 5)
 var file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes = make([]protoimpl.MessageInfo, 30)
-var file_protoc_gen_openapiv2_options_openapiv2_proto_goTypes = []interface{}{
+var file_protoc_gen_openapiv2_options_openapiv2_proto_goTypes = []any{
 	(Scheme)(0),                           // 0: grpc.gateway.protoc_gen_openapiv2.options.Scheme
 	(JSONSchema_JSONSchemaSimpleTypes)(0), // 1: grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.JSONSchemaSimpleTypes
 	(SecurityScheme_Type)(0),              // 2: grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.Type
@@ -2669,7 +2659,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*Swagger); i {
 			case 0:
 				return &v.state
@@ -2681,7 +2671,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*Operation); i {
 			case 0:
 				return &v.state
@@ -2693,7 +2683,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*Header); i {
 			case 0:
 				return &v.state
@@ -2705,7 +2695,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*Response); i {
 			case 0:
 				return &v.state
@@ -2717,7 +2707,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*Info); i {
 			case 0:
 				return &v.state
@@ -2729,7 +2719,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*Contact); i {
 			case 0:
 				return &v.state
@@ -2741,7 +2731,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*License); i {
 			case 0:
 				return &v.state
@@ -2753,7 +2743,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*ExternalDocumentation); i {
 			case 0:
 				return &v.state
@@ -2765,7 +2755,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*Schema); i {
 			case 0:
 				return &v.state
@@ -2777,7 +2767,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*JSONSchema); i {
 			case 0:
 				return &v.state
@@ -2789,7 +2779,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*Tag); i {
 			case 0:
 				return &v.state
@@ -2801,7 +2791,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[11].Exporter = func(v any, i int) any {
 			switch v := v.(*SecurityDefinitions); i {
 			case 0:
 				return &v.state
@@ -2813,7 +2803,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[12].Exporter = func(v any, i int) any {
 			switch v := v.(*SecurityScheme); i {
 			case 0:
 				return &v.state
@@ -2825,7 +2815,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[13].Exporter = func(v any, i int) any {
 			switch v := v.(*SecurityRequirement); i {
 			case 0:
 				return &v.state
@@ -2837,7 +2827,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[14].Exporter = func(v any, i int) any {
 			switch v := v.(*Scopes); i {
 			case 0:
 				return &v.state
@@ -2849,7 +2839,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[23].Exporter = func(v any, i int) any {
 			switch v := v.(*JSONSchema_FieldConfiguration); i {
 			case 0:
 				return &v.state
@@ -2861,7 +2851,7 @@ func file_protoc_gen_openapiv2_options_openapiv2_proto_init() {
 				return nil
 			}
 		}
-		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
+		file_protoc_gen_openapiv2_options_openapiv2_proto_msgTypes[27].Exporter = func(v any, i int) any {
 			switch v := v.(*SecurityRequirement_SecurityRequirementValue); i {
 			case 0:
 				return &v.state

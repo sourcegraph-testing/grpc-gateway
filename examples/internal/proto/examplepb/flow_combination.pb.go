@@ -475,7 +475,7 @@ func file_examples_internal_proto_examplepb_flow_combination_proto_rawDescGZIP()
 }
 
 var file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
-var file_examples_internal_proto_examplepb_flow_combination_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_flow_combination_proto_goTypes = []any{
 	(*EmptyProto)(nil),        // 0: grpc.gateway.examples.internal.proto.examplepb.EmptyProto
 	(*NonEmptyProto)(nil),     // 1: grpc.gateway.examples.internal.proto.examplepb.NonEmptyProto
 	(*UnaryProto)(nil),        // 2: grpc.gateway.examples.internal.proto.examplepb.UnaryProto
@@ -518,7 +518,7 @@ func file_examples_internal_proto_examplepb_flow_combination_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*EmptyProto); i {
 			case 0:
 				return &v.state
@@ -530,7 +530,7 @@ func file_examples_internal_proto_examplepb_flow_combination_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*NonEmptyProto); i {
 			case 0:
 				return &v.state
@@ -542,7 +542,7 @@ func file_examples_internal_proto_examplepb_flow_combination_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*UnaryProto); i {
 			case 0:
 				return &v.state
@@ -554,7 +554,7 @@ func file_examples_internal_proto_examplepb_flow_combination_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*NestedProto); i {
 			case 0:
 				return &v.state
@@ -566,7 +566,7 @@ func file_examples_internal_proto_examplepb_flow_combination_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_flow_combination_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*SingleNestedProto); i {
 			case 0:
 				return &v.state

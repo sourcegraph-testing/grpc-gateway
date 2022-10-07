@@ -99,7 +99,7 @@ func TestJSONBuiltinUnmarshalField(t *testing.T) {
 
 func alloc(t reflect.Type) reflect.Value {
 	if t == nil {
-		return reflect.ValueOf(new(interface{}))
+		return reflect.ValueOf(new(any))
 	} else {
 		return reflect.New(t)
 	}
@@ -191,7 +191,7 @@ func TestJSONBuiltinDecoderFields(t *testing.T) {
 
 var (
 	builtinFieldFixtures = []struct {
-		data interface{}
+		data any
 		json string
 	}{
 		{data: "", json: `""`},
@@ -219,9 +219,9 @@ var (
 		{data: examplepb.NumericEnum_ONE, json: "1"},
 		{data: nil, json: "null"},
 		{data: (*string)(nil), json: "null"},
-		{data: []interface{}{nil, "foo", -1.0, 1.234, true}, json: `[null,"foo",-1,1.234,true]`},
+		{data: []any{nil, "foo", -1.0, 1.234, true}, json: `[null,"foo",-1,1.234,true]`},
 		{
-			data: map[string]interface{}{"bar": nil, "baz": -1.0, "fiz": 1.234, "foo": true},
+			data: map[string]any{"bar": nil, "baz": -1.0, "fiz": 1.234, "foo": true},
 			json: `{"bar":null,"baz":-1,"fiz":1.234,"foo":true}`,
 		},
 		{
@@ -230,7 +230,7 @@ var (
 		},
 	}
 	builtinKnownErrors = []struct {
-		data interface{}
+		data any
 		json string
 	}{
 		{data: examplepb.NumericEnum_ONE, json: "ONE"},

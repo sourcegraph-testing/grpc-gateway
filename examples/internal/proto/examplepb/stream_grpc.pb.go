@@ -202,7 +202,7 @@ func RegisterStreamServiceServer(s grpc.ServiceRegistrar, srv StreamServiceServe
 	s.RegisterService(&StreamService_ServiceDesc, srv)
 }
 
-func _StreamService_BulkCreate_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _StreamService_BulkCreate_Handler(srv any, stream grpc.ServerStream) error {
 	return srv.(StreamServiceServer).BulkCreate(&streamServiceBulkCreateServer{stream})
 }
 
@@ -228,7 +228,7 @@ func (x *streamServiceBulkCreateServer) Recv() (*ABitOfEverything, error) {
 	return m, nil
 }
 
-func _StreamService_List_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _StreamService_List_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(emptypb.Empty)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -249,7 +249,7 @@ func (x *streamServiceListServer) Send(m *ABitOfEverything) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _StreamService_BulkEcho_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _StreamService_BulkEcho_Handler(srv any, stream grpc.ServerStream) error {
 	return srv.(StreamServiceServer).BulkEcho(&streamServiceBulkEchoServer{stream})
 }
 
@@ -275,7 +275,7 @@ func (x *streamServiceBulkEchoServer) Recv() (*sub.StringMessage, error) {
 	return m, nil
 }
 
-func _StreamService_Download_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _StreamService_Download_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(emptypb.Empty)
 	if err := stream.RecvMsg(m); err != nil {
 		return err

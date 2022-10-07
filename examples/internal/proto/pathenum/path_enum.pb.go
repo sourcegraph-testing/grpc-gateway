@@ -348,7 +348,7 @@ func file_examples_internal_proto_pathenum_path_enum_proto_rawDescGZIP() []byte 
 
 var file_examples_internal_proto_pathenum_path_enum_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_examples_internal_proto_pathenum_path_enum_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
-var file_examples_internal_proto_pathenum_path_enum_proto_goTypes = []interface{}{
+var file_examples_internal_proto_pathenum_path_enum_proto_goTypes = []any{
 	(PathEnum)(0),                       // 0: grpc.gateway.examples.internal.pathenum.PathEnum
 	(SnakeCaseForImport)(0),             // 1: grpc.gateway.examples.internal.pathenum.snake_case_for_import
 	(MessagePathEnum_NestedPathEnum)(0), // 2: grpc.gateway.examples.internal.pathenum.MessagePathEnum.NestedPathEnum
@@ -372,7 +372,7 @@ func file_examples_internal_proto_pathenum_path_enum_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_pathenum_path_enum_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_pathenum_path_enum_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*MessagePathEnum); i {
 			case 0:
 				return &v.state
@@ -384,7 +384,7 @@ func file_examples_internal_proto_pathenum_path_enum_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_pathenum_path_enum_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_pathenum_path_enum_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*MessageWithPathEnum); i {
 			case 0:
 				return &v.state
@@ -396,7 +396,7 @@ func file_examples_internal_proto_pathenum_path_enum_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_pathenum_path_enum_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_pathenum_path_enum_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*MessageWithNestedPathEnum); i {
 			case 0:
 				return &v.state

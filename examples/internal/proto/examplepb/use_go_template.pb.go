@@ -329,7 +329,7 @@ func file_examples_internal_proto_examplepb_use_go_template_proto_rawDescGZIP() 
 }
 
 var file_examples_internal_proto_examplepb_use_go_template_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_examples_internal_proto_examplepb_use_go_template_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_use_go_template_proto_goTypes = []any{
 	(*LoginRequest)(nil),  // 0: grpc.gateway.examples.internal.proto.examplepb.LoginRequest
 	(*LoginReply)(nil),    // 1: grpc.gateway.examples.internal.proto.examplepb.LoginReply
 	(*LogoutRequest)(nil), // 2: grpc.gateway.examples.internal.proto.examplepb.LogoutRequest
@@ -353,7 +353,7 @@ func file_examples_internal_proto_examplepb_use_go_template_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_examplepb_use_go_template_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_use_go_template_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*LoginRequest); i {
 			case 0:
 				return &v.state
@@ -365,7 +365,7 @@ func file_examples_internal_proto_examplepb_use_go_template_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_use_go_template_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_use_go_template_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*LoginReply); i {
 			case 0:
 				return &v.state
@@ -377,7 +377,7 @@ func file_examples_internal_proto_examplepb_use_go_template_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_use_go_template_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_use_go_template_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*LogoutRequest); i {
 			case 0:
 				return &v.state
@@ -389,7 +389,7 @@ func file_examples_internal_proto_examplepb_use_go_template_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_use_go_template_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_use_go_template_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*LogoutReply); i {
 			case 0:
 				return &v.state

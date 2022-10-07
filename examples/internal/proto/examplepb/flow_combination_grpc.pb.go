@@ -329,7 +329,7 @@ func RegisterFlowCombinationServer(s grpc.ServiceRegistrar, srv FlowCombinationS
 	s.RegisterService(&FlowCombination_ServiceDesc, srv)
 }
 
-func _FlowCombination_RpcEmptyRpc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FlowCombination_RpcEmptyRpc_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(EmptyProto)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -341,13 +341,13 @@ func _FlowCombination_RpcEmptyRpc_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcEmptyRpc",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(FlowCombinationServer).RpcEmptyRpc(ctx, req.(*EmptyProto))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _FlowCombination_RpcEmptyStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _FlowCombination_RpcEmptyStream_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(EmptyProto)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -368,7 +368,7 @@ func (x *flowCombinationRpcEmptyStreamServer) Send(m *EmptyProto) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _FlowCombination_StreamEmptyRpc_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _FlowCombination_StreamEmptyRpc_Handler(srv any, stream grpc.ServerStream) error {
 	return srv.(FlowCombinationServer).StreamEmptyRpc(&flowCombinationStreamEmptyRpcServer{stream})
 }
 
@@ -394,7 +394,7 @@ func (x *flowCombinationStreamEmptyRpcServer) Recv() (*EmptyProto, error) {
 	return m, nil
 }
 
-func _FlowCombination_StreamEmptyStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _FlowCombination_StreamEmptyStream_Handler(srv any, stream grpc.ServerStream) error {
 	return srv.(FlowCombinationServer).StreamEmptyStream(&flowCombinationStreamEmptyStreamServer{stream})
 }
 
@@ -420,7 +420,7 @@ func (x *flowCombinationStreamEmptyStreamServer) Recv() (*EmptyProto, error) {
 	return m, nil
 }
 
-func _FlowCombination_RpcBodyRpc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FlowCombination_RpcBodyRpc_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(NonEmptyProto)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -432,13 +432,13 @@ func _FlowCombination_RpcBodyRpc_Handler(srv interface{}, ctx context.Context, d
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcBodyRpc",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(FlowCombinationServer).RpcBodyRpc(ctx, req.(*NonEmptyProto))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _FlowCombination_RpcPathSingleNestedRpc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FlowCombination_RpcPathSingleNestedRpc_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SingleNestedProto)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -450,13 +450,13 @@ func _FlowCombination_RpcPathSingleNestedRpc_Handler(srv interface{}, ctx contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathSingleNestedRpc",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(FlowCombinationServer).RpcPathSingleNestedRpc(ctx, req.(*SingleNestedProto))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _FlowCombination_RpcPathNestedRpc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FlowCombination_RpcPathNestedRpc_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(NestedProto)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -468,13 +468,13 @@ func _FlowCombination_RpcPathNestedRpc_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.FlowCombination/RpcPathNestedRpc",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(FlowCombinationServer).RpcPathNestedRpc(ctx, req.(*NestedProto))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _FlowCombination_RpcBodyStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _FlowCombination_RpcBodyStream_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(NonEmptyProto)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -495,7 +495,7 @@ func (x *flowCombinationRpcBodyStreamServer) Send(m *EmptyProto) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _FlowCombination_RpcPathSingleNestedStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _FlowCombination_RpcPathSingleNestedStream_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(SingleNestedProto)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -516,7 +516,7 @@ func (x *flowCombinationRpcPathSingleNestedStreamServer) Send(m *EmptyProto) err
 	return x.ServerStream.SendMsg(m)
 }
 
-func _FlowCombination_RpcPathNestedStream_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _FlowCombination_RpcPathNestedStream_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(NestedProto)
 	if err := stream.RecvMsg(m); err != nil {
 		return err

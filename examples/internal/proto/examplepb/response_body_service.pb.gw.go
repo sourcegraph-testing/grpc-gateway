@@ -448,7 +448,7 @@ type response_ResponseBodyService_GetResponseBody_0 struct {
 	proto.Message
 }
 
-func (m response_ResponseBodyService_GetResponseBody_0) XXX_ResponseBody() interface{} {
+func (m response_ResponseBodyService_GetResponseBody_0) XXX_ResponseBody() any {
 	response := m.Message.(*ResponseBodyOut)
 	return response.Response
 }
@@ -457,7 +457,7 @@ type response_ResponseBodyService_ListResponseBodies_0 struct {
 	proto.Message
 }
 
-func (m response_ResponseBodyService_ListResponseBodies_0) XXX_ResponseBody() interface{} {
+func (m response_ResponseBodyService_ListResponseBodies_0) XXX_ResponseBody() any {
 	response := m.Message.(*RepeatedResponseBodyOut)
 	return response.Response
 }
@@ -466,7 +466,7 @@ type response_ResponseBodyService_ListResponseStrings_0 struct {
 	proto.Message
 }
 
-func (m response_ResponseBodyService_ListResponseStrings_0) XXX_ResponseBody() interface{} {
+func (m response_ResponseBodyService_ListResponseStrings_0) XXX_ResponseBody() any {
 	response := m.Message.(*RepeatedResponseStrings)
 	return response.Values
 }
@@ -475,7 +475,7 @@ type response_ResponseBodyService_GetResponseBodyStream_0 struct {
 	proto.Message
 }
 
-func (m response_ResponseBodyService_GetResponseBodyStream_0) XXX_ResponseBody() interface{} {
+func (m response_ResponseBodyService_GetResponseBodyStream_0) XXX_ResponseBody() any {
 	response := m.Message.(*ResponseBodyOut)
 	return response.Response
 }

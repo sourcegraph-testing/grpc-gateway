@@ -15,17 +15,17 @@ import (
 type JSONBuiltin struct{}
 
 // ContentType always Returns "application/json".
-func (*JSONBuiltin) ContentType(_ interface{}) string {
+func (*JSONBuiltin) ContentType(_ any) string {
 	return "application/json"
 }
 
 // Marshal marshals "v" into JSON
-func (j *JSONBuiltin) Marshal(v interface{}) ([]byte, error) {
+func (j *JSONBuiltin) Marshal(v any) ([]byte, error) {
 	return json.Marshal(v)
 }
 
 // Unmarshal unmarshals JSON data into "v".
-func (j *JSONBuiltin) Unmarshal(data []byte, v interface{}) error {
+func (j *JSONBuiltin) Unmarshal(data []byte, v any) error {
 	return json.Unmarshal(data, v)
 }
 

@@ -66,7 +66,7 @@ func TestRawExample(t *testing.T) {
 func TestOpenapiSchemaObjectProperties(t *testing.T) {
 	t.Parallel()
 
-	v := map[string]interface{}{
+	v := map[string]any{
 		"example": openapiSchemaObjectProperties{{
 			Key:   "test1",
 			Value: 1,

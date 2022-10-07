@@ -179,7 +179,7 @@ func file_examples_internal_proto_examplepb_openapi_merge_b_proto_rawDescGZIP() 
 }
 
 var file_examples_internal_proto_examplepb_openapi_merge_b_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_examples_internal_proto_examplepb_openapi_merge_b_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_openapi_merge_b_proto_goTypes = []any{
 	(*InMessageB)(nil),  // 0: grpc.gateway.examples.internal.examplepb.InMessageB
 	(*OutMessageB)(nil), // 1: grpc.gateway.examples.internal.examplepb.OutMessageB
 }
@@ -201,7 +201,7 @@ func file_examples_internal_proto_examplepb_openapi_merge_b_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_examplepb_openapi_merge_b_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_openapi_merge_b_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*InMessageB); i {
 			case 0:
 				return &v.state
@@ -213,7 +213,7 @@ func file_examples_internal_proto_examplepb_openapi_merge_b_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_openapi_merge_b_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_openapi_merge_b_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*OutMessageB); i {
 			case 0:
 				return &v.state

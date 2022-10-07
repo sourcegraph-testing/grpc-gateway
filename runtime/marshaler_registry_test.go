@@ -93,12 +93,12 @@ func TestMarshalerForRequest(t *testing.T) {
 
 type dummyMarshaler int
 
-func (dummyMarshaler) ContentType(_ interface{}) string { return "" }
-func (dummyMarshaler) Marshal(interface{}) ([]byte, error) {
+func (dummyMarshaler) ContentType(_ any) string { return "" }
+func (dummyMarshaler) Marshal(any) ([]byte, error) {
 	return nil, errors.New("not implemented")
 }
 
-func (dummyMarshaler) Unmarshal([]byte, interface{}) error {
+func (dummyMarshaler) Unmarshal([]byte, any) error {
 	return errors.New("not implemented")
 }
 
@@ -115,12 +115,12 @@ func (m dummyMarshaler) GoString() string {
 
 type dummyDecoder struct{}
 
-func (dummyDecoder) Decode(interface{}) error {
+func (dummyDecoder) Decode(any) error {
 	return errors.New("not implemented")
 }
 
 type dummyEncoder struct{}
 
-func (dummyEncoder) Encode(interface{}) error {
+func (dummyEncoder) Encode(any) error {
 	return errors.New("not implemented")
 }

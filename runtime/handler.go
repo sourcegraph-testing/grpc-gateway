@@ -72,7 +72,7 @@ func ForwardResponseStream(ctx context.Context, mux *ServeMux, marshaler Marshal
 		case isHTTPBody:
 			buf = httpBody.GetData()
 		default:
-			result := map[string]interface{}{"result": resp}
+			result := map[string]any{"result": resp}
 			if rb, ok := resp.(responseBody); ok {
 				result["result"] = rb.XXX_ResponseBody()
 			}
@@ -127,7 +127,7 @@ func handleForwardResponseTrailer(w http.ResponseWriter, md ServerMetadata) {
 // responseBody interface contains method for getting field for marshaling to the response body
 // this method is generated for response struct from the value of `response_body` in the `google.api.HttpRule`
 type responseBody interface {
-	XXX_ResponseBody() interface{}
+	XXX_ResponseBody() any
 }
 
 // ForwardResponseMessage forwards the message "resp" from gRPC server to REST client.

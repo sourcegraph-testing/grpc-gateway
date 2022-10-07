@@ -35,7 +35,7 @@ func TestGenerate_YAML(t *testing.T) {
 		t.Fatalf("invalid count, expected: 1, actual: %d", len(resp))
 	}
 
-	var p map[string]interface{}
+	var p map[string]any
 	err := yaml.Unmarshal([]byte(resp[0].GetContent()), &p)
 	if err != nil {
 		t.Fatalf("failed to unmarshall yaml: %s", err)
@@ -249,7 +249,7 @@ func TestGeneratedYAMLIndent(t *testing.T) {
 
 	content := resp[0].GetContent()
 
-	err := yaml.Unmarshal([]byte(content), map[string]interface{}{})
+	err := yaml.Unmarshal([]byte(content), map[string]any{})
 	if err != nil {
 		t.Log(content)
 		t.Fatalf("got invalid yaml: %s", err)

@@ -484,7 +484,7 @@ func file_examples_internal_proto_examplepb_response_body_service_proto_rawDescG
 
 var file_examples_internal_proto_examplepb_response_body_service_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
-var file_examples_internal_proto_examplepb_response_body_service_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_response_body_service_proto_goTypes = []any{
 	(RepeatedResponseBodyOut_Response_ResponseType)(0), // 0: grpc.gateway.examples.internal.proto.examplepb.RepeatedResponseBodyOut.Response.ResponseType
 	(*ResponseBodyIn)(nil),                             // 1: grpc.gateway.examples.internal.proto.examplepb.ResponseBodyIn
 	(*ResponseBodyOut)(nil),                            // 2: grpc.gateway.examples.internal.proto.examplepb.ResponseBodyOut
@@ -518,7 +518,7 @@ func file_examples_internal_proto_examplepb_response_body_service_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*ResponseBodyIn); i {
 			case 0:
 				return &v.state
@@ -530,7 +530,7 @@ func file_examples_internal_proto_examplepb_response_body_service_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*ResponseBodyOut); i {
 			case 0:
 				return &v.state
@@ -542,7 +542,7 @@ func file_examples_internal_proto_examplepb_response_body_service_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*RepeatedResponseBodyOut); i {
 			case 0:
 				return &v.state
@@ -554,7 +554,7 @@ func file_examples_internal_proto_examplepb_response_body_service_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*RepeatedResponseStrings); i {
 			case 0:
 				return &v.state
@@ -566,7 +566,7 @@ func file_examples_internal_proto_examplepb_response_body_service_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*ResponseBodyOut_Response); i {
 			case 0:
 				return &v.state
@@ -578,7 +578,7 @@ func file_examples_internal_proto_examplepb_response_body_service_proto_init() {
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_response_body_service_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*RepeatedResponseBodyOut_Response); i {
 			case 0:
 				return &v.state

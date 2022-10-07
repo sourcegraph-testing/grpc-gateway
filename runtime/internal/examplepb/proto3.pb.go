@@ -829,7 +829,7 @@ func file_runtime_internal_examplepb_proto3_proto_rawDescGZIP() []byte {
 
 var file_runtime_internal_examplepb_proto3_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_runtime_internal_examplepb_proto3_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
-var file_runtime_internal_examplepb_proto3_proto_goTypes = []interface{}{
+var file_runtime_internal_examplepb_proto3_proto_goTypes = []any{
 	(EnumValue)(0),                 // 0: grpc.gateway.runtime.internal.examplepb.EnumValue
 	(*Proto3Message)(nil),          // 1: grpc.gateway.runtime.internal.examplepb.Proto3Message
 	nil,                            // 2: grpc.gateway.runtime.internal.examplepb.Proto3Message.MapValueEntry
@@ -909,7 +909,7 @@ func file_runtime_internal_examplepb_proto3_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_runtime_internal_examplepb_proto3_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_runtime_internal_examplepb_proto3_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*Proto3Message); i {
 			case 0:
 				return &v.state
@@ -922,7 +922,7 @@ func file_runtime_internal_examplepb_proto3_proto_init() {
 			}
 		}
 	}
-	file_runtime_internal_examplepb_proto3_proto_msgTypes[0].OneofWrappers = []interface{}{
+	file_runtime_internal_examplepb_proto3_proto_msgTypes[0].OneofWrappers = []any{
 		(*Proto3Message_OneofBoolValue)(nil),
 		(*Proto3Message_OneofStringValue)(nil),
 		(*Proto3Message_NestedOneofValueOne)(nil),

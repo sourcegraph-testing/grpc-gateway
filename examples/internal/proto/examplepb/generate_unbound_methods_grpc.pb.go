@@ -104,7 +104,7 @@ func RegisterGenerateUnboundMethodsEchoServiceServer(s grpc.ServiceRegistrar, sr
 	s.RegisterService(&GenerateUnboundMethodsEchoService_ServiceDesc, srv)
 }
 
-func _GenerateUnboundMethodsEchoService_Echo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _GenerateUnboundMethodsEchoService_Echo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GenerateUnboundMethodsSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -116,13 +116,13 @@ func _GenerateUnboundMethodsEchoService_Echo_Handler(srv interface{}, ctx contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.GenerateUnboundMethodsEchoService/Echo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(GenerateUnboundMethodsEchoServiceServer).Echo(ctx, req.(*GenerateUnboundMethodsSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _GenerateUnboundMethodsEchoService_EchoBody_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _GenerateUnboundMethodsEchoService_EchoBody_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GenerateUnboundMethodsSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -134,13 +134,13 @@ func _GenerateUnboundMethodsEchoService_EchoBody_Handler(srv interface{}, ctx co
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.GenerateUnboundMethodsEchoService/EchoBody",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(GenerateUnboundMethodsEchoServiceServer).EchoBody(ctx, req.(*GenerateUnboundMethodsSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _GenerateUnboundMethodsEchoService_EchoDelete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _GenerateUnboundMethodsEchoService_EchoDelete_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GenerateUnboundMethodsSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -152,7 +152,7 @@ func _GenerateUnboundMethodsEchoService_EchoDelete_Handler(srv interface{}, ctx 
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.GenerateUnboundMethodsEchoService/EchoDelete",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(GenerateUnboundMethodsEchoServiceServer).EchoDelete(ctx, req.(*GenerateUnboundMethodsSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)

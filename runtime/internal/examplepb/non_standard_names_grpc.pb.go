@@ -82,7 +82,7 @@ func RegisterNonStandardServiceServer(s grpc.ServiceRegistrar, srv NonStandardSe
 	s.RegisterService(&NonStandardService_ServiceDesc, srv)
 }
 
-func _NonStandardService_Update_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _NonStandardService_Update_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(NonStandardUpdateRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -94,13 +94,13 @@ func _NonStandardService_Update_Handler(srv interface{}, ctx context.Context, de
 		Server:     srv,
 		FullMethod: "/grpc.gateway.runtime.internal.examplepb.NonStandardService/Update",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(NonStandardServiceServer).Update(ctx, req.(*NonStandardUpdateRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _NonStandardService_UpdateWithJSONNames_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _NonStandardService_UpdateWithJSONNames_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(NonStandardWithJSONNamesUpdateRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -112,7 +112,7 @@ func _NonStandardService_UpdateWithJSONNames_Handler(srv interface{}, ctx contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.runtime.internal.examplepb.NonStandardService/UpdateWithJSONNames",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(NonStandardServiceServer).UpdateWithJSONNames(ctx, req.(*NonStandardWithJSONNamesUpdateRequest))
 	}
 	return interceptor(ctx, in, info, handler)

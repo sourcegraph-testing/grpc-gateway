@@ -104,7 +104,7 @@ func RegisterUnannotatedEchoServiceServer(s grpc.ServiceRegistrar, srv Unannotat
 	s.RegisterService(&UnannotatedEchoService_ServiceDesc, srv)
 }
 
-func _UnannotatedEchoService_Echo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UnannotatedEchoService_Echo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UnannotatedSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -116,13 +116,13 @@ func _UnannotatedEchoService_Echo_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.UnannotatedEchoService/Echo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(UnannotatedEchoServiceServer).Echo(ctx, req.(*UnannotatedSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UnannotatedEchoService_EchoBody_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UnannotatedEchoService_EchoBody_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UnannotatedSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -134,13 +134,13 @@ func _UnannotatedEchoService_EchoBody_Handler(srv interface{}, ctx context.Conte
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.UnannotatedEchoService/EchoBody",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(UnannotatedEchoServiceServer).EchoBody(ctx, req.(*UnannotatedSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UnannotatedEchoService_EchoDelete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UnannotatedEchoService_EchoDelete_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UnannotatedSimpleMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -152,7 +152,7 @@ func _UnannotatedEchoService_EchoDelete_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.UnannotatedEchoService/EchoDelete",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(UnannotatedEchoServiceServer).EchoDelete(ctx, req.(*UnannotatedSimpleMessage))
 	}
 	return interceptor(ctx, in, info, handler)

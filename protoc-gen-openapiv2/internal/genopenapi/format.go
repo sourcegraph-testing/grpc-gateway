@@ -16,7 +16,7 @@ const (
 )
 
 type ContentEncoder interface {
-	Encode(v interface{}) (err error)
+	Encode(v any) (err error)
 }
 
 func (f Format) Validate() error {

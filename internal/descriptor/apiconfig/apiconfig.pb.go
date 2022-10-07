@@ -112,7 +112,7 @@ func file_internal_descriptor_apiconfig_apiconfig_proto_rawDescGZIP() []byte {
 }
 
 var file_internal_descriptor_apiconfig_apiconfig_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_internal_descriptor_apiconfig_apiconfig_proto_goTypes = []interface{}{
+var file_internal_descriptor_apiconfig_apiconfig_proto_goTypes = []any{
 	(*GrpcAPIService)(nil),   // 0: grpc.gateway.internal.descriptor.apiconfig.GrpcAPIService
 	(*annotations.Http)(nil), // 1: google.api.Http
 }
@@ -131,7 +131,7 @@ func file_internal_descriptor_apiconfig_apiconfig_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_internal_descriptor_apiconfig_apiconfig_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_internal_descriptor_apiconfig_apiconfig_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*GrpcAPIService); i {
 			case 0:
 				return &v.state

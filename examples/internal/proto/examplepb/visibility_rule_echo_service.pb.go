@@ -536,7 +536,7 @@ func file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_r
 
 var file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_goTypes = []interface{}{
+var file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_goTypes = []any{
 	(VisibilityRuleSimpleMessage_VisibilityEnum)(0), // 0: grpc.gateway.examples.internal.proto.examplepb.VisibilityRuleSimpleMessage.VisibilityEnum
 	(*VisibilityRuleEmbedded)(nil),                  // 1: grpc.gateway.examples.internal.proto.examplepb.VisibilityRuleEmbedded
 	(*VisibilityRuleSimpleMessage)(nil),             // 2: grpc.gateway.examples.internal.proto.examplepb.VisibilityRuleSimpleMessage
@@ -568,7 +568,7 @@ func file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_i
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*VisibilityRuleEmbedded); i {
 			case 0:
 				return &v.state
@@ -580,7 +580,7 @@ func file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_i
 				return nil
 			}
 		}
-		file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*VisibilityRuleSimpleMessage); i {
 			case 0:
 				return &v.state
@@ -593,13 +593,13 @@ func file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_i
 			}
 		}
 	}
-	file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_msgTypes[0].OneofWrappers = []interface{}{
+	file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_msgTypes[0].OneofWrappers = []any{
 		(*VisibilityRuleEmbedded_Progress)(nil),
 		(*VisibilityRuleEmbedded_Note)(nil),
 		(*VisibilityRuleEmbedded_InternalField)(nil),
 		(*VisibilityRuleEmbedded_PreviewField)(nil),
 	}
-	file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_msgTypes[1].OneofWrappers = []interface{}{
+	file_examples_internal_proto_examplepb_visibility_rule_echo_service_proto_msgTypes[1].OneofWrappers = []any{
 		(*VisibilityRuleSimpleMessage_LineNum)(nil),
 		(*VisibilityRuleSimpleMessage_Lang)(nil),
 		(*VisibilityRuleSimpleMessage_En)(nil),

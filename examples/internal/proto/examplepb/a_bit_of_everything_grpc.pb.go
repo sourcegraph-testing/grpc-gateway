@@ -499,7 +499,7 @@ func RegisterABitOfEverythingServiceServer(s grpc.ServiceRegistrar, srv ABitOfEv
 	s.RegisterService(&ABitOfEverythingService_ServiceDesc, srv)
 }
 
-func _ABitOfEverythingService_Create_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_Create_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -511,13 +511,13 @@ func _ABitOfEverythingService_Create_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/Create",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).Create(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_CreateBody_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_CreateBody_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -529,13 +529,13 @@ func _ABitOfEverythingService_CreateBody_Handler(srv interface{}, ctx context.Co
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/CreateBody",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).CreateBody(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_CreateBook_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_CreateBook_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(CreateBookRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -547,13 +547,13 @@ func _ABitOfEverythingService_CreateBook_Handler(srv interface{}, ctx context.Co
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/CreateBook",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).CreateBook(ctx, req.(*CreateBookRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_UpdateBook_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_UpdateBook_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UpdateBookRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -565,13 +565,13 @@ func _ABitOfEverythingService_UpdateBook_Handler(srv interface{}, ctx context.Co
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/UpdateBook",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).UpdateBook(ctx, req.(*UpdateBookRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_Lookup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_Lookup_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(sub2.IdMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -583,13 +583,13 @@ func _ABitOfEverythingService_Lookup_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/Lookup",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).Lookup(ctx, req.(*sub2.IdMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_Custom_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_Custom_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -601,13 +601,13 @@ func _ABitOfEverythingService_Custom_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/Custom",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).Custom(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_DoubleColon_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_DoubleColon_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -619,13 +619,13 @@ func _ABitOfEverythingService_DoubleColon_Handler(srv interface{}, ctx context.C
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/DoubleColon",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).DoubleColon(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_Update_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_Update_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -637,13 +637,13 @@ func _ABitOfEverythingService_Update_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/Update",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).Update(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_UpdateV2_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_UpdateV2_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UpdateV2Request)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -655,13 +655,13 @@ func _ABitOfEverythingService_UpdateV2_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/UpdateV2",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).UpdateV2(ctx, req.(*UpdateV2Request))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_Delete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_Delete_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(sub2.IdMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -673,13 +673,13 @@ func _ABitOfEverythingService_Delete_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/Delete",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).Delete(ctx, req.(*sub2.IdMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_GetQuery_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_GetQuery_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -691,13 +691,13 @@ func _ABitOfEverythingService_GetQuery_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/GetQuery",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).GetQuery(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_GetRepeatedQuery_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_GetRepeatedQuery_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverythingRepeated)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -709,13 +709,13 @@ func _ABitOfEverythingService_GetRepeatedQuery_Handler(srv interface{}, ctx cont
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/GetRepeatedQuery",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).GetRepeatedQuery(ctx, req.(*ABitOfEverythingRepeated))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_Echo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_Echo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(sub.StringMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -727,13 +727,13 @@ func _ABitOfEverythingService_Echo_Handler(srv interface{}, ctx context.Context,
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/Echo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).Echo(ctx, req.(*sub.StringMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_DeepPathEcho_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_DeepPathEcho_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -745,13 +745,13 @@ func _ABitOfEverythingService_DeepPathEcho_Handler(srv interface{}, ctx context.
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/DeepPathEcho",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).DeepPathEcho(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_NoBindings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_NoBindings_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(durationpb.Duration)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -763,13 +763,13 @@ func _ABitOfEverythingService_NoBindings_Handler(srv interface{}, ctx context.Co
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/NoBindings",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).NoBindings(ctx, req.(*durationpb.Duration))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_Timeout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_Timeout_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -781,13 +781,13 @@ func _ABitOfEverythingService_Timeout_Handler(srv interface{}, ctx context.Conte
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/Timeout",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).Timeout(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_ErrorWithDetails_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_ErrorWithDetails_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -799,13 +799,13 @@ func _ABitOfEverythingService_ErrorWithDetails_Handler(srv interface{}, ctx cont
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/ErrorWithDetails",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).ErrorWithDetails(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_GetMessageWithBody_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_GetMessageWithBody_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(MessageWithBody)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -817,13 +817,13 @@ func _ABitOfEverythingService_GetMessageWithBody_Handler(srv interface{}, ctx co
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/GetMessageWithBody",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).GetMessageWithBody(ctx, req.(*MessageWithBody))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_PostWithEmptyBody_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_PostWithEmptyBody_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(Body)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -835,13 +835,13 @@ func _ABitOfEverythingService_PostWithEmptyBody_Handler(srv interface{}, ctx con
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/PostWithEmptyBody",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).PostWithEmptyBody(ctx, req.(*Body))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_CheckGetQueryParams_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_CheckGetQueryParams_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -853,13 +853,13 @@ func _ABitOfEverythingService_CheckGetQueryParams_Handler(srv interface{}, ctx c
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/CheckGetQueryParams",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).CheckGetQueryParams(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_CheckNestedEnumGetQueryParams_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_CheckNestedEnumGetQueryParams_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -871,13 +871,13 @@ func _ABitOfEverythingService_CheckNestedEnumGetQueryParams_Handler(srv interfac
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/CheckNestedEnumGetQueryParams",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).CheckNestedEnumGetQueryParams(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_CheckPostQueryParams_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_CheckPostQueryParams_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -889,13 +889,13 @@ func _ABitOfEverythingService_CheckPostQueryParams_Handler(srv interface{}, ctx 
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/CheckPostQueryParams",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).CheckPostQueryParams(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_OverwriteResponseContentType_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_OverwriteResponseContentType_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -907,13 +907,13 @@ func _ABitOfEverythingService_OverwriteResponseContentType_Handler(srv interface
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/OverwriteResponseContentType",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).OverwriteResponseContentType(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_CheckExternalPathEnum_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_CheckExternalPathEnum_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(pathenum.MessageWithPathEnum)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -925,13 +925,13 @@ func _ABitOfEverythingService_CheckExternalPathEnum_Handler(srv interface{}, ctx
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/CheckExternalPathEnum",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).CheckExternalPathEnum(ctx, req.(*pathenum.MessageWithPathEnum))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_CheckExternalNestedPathEnum_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_CheckExternalNestedPathEnum_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(pathenum.MessageWithNestedPathEnum)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -943,13 +943,13 @@ func _ABitOfEverythingService_CheckExternalNestedPathEnum_Handler(srv interface{
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/CheckExternalNestedPathEnum",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).CheckExternalNestedPathEnum(ctx, req.(*pathenum.MessageWithNestedPathEnum))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_CheckStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_CheckStatus_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -961,13 +961,13 @@ func _ABitOfEverythingService_CheckStatus_Handler(srv interface{}, ctx context.C
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/CheckStatus",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).CheckStatus(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_Exists_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_Exists_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -979,13 +979,13 @@ func _ABitOfEverythingService_Exists_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/Exists",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).Exists(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_CustomOptionsRequest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_CustomOptionsRequest_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -997,13 +997,13 @@ func _ABitOfEverythingService_CustomOptionsRequest_Handler(srv interface{}, ctx 
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/CustomOptionsRequest",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).CustomOptionsRequest(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_TraceRequest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_TraceRequest_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ABitOfEverything)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -1015,13 +1015,13 @@ func _ABitOfEverythingService_TraceRequest_Handler(srv interface{}, ctx context.
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/TraceRequest",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).TraceRequest(ctx, req.(*ABitOfEverything))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ABitOfEverythingService_PostOneofEnum_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ABitOfEverythingService_PostOneofEnum_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(oneofenum.OneofEnumMessage)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -1033,7 +1033,7 @@ func _ABitOfEverythingService_PostOneofEnum_Handler(srv interface{}, ctx context
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.ABitOfEverythingService/PostOneofEnum",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ABitOfEverythingServiceServer).PostOneofEnum(ctx, req.(*oneofenum.OneofEnumMessage))
 	}
 	return interceptor(ctx, in, info, handler)
@@ -1221,7 +1221,7 @@ func RegisterCamelCaseServiceNameServer(s grpc.ServiceRegistrar, srv CamelCaseSe
 	s.RegisterService(&CamelCaseServiceName_ServiceDesc, srv)
 }
 
-func _CamelCaseServiceName_Empty_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CamelCaseServiceName_Empty_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -1233,7 +1233,7 @@ func _CamelCaseServiceName_Empty_Handler(srv interface{}, ctx context.Context, d
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.camelCaseServiceName/Empty",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(CamelCaseServiceNameServer).Empty(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
@@ -1305,7 +1305,7 @@ func RegisterAnotherServiceWithNoBindingsServer(s grpc.ServiceRegistrar, srv Ano
 	s.RegisterService(&AnotherServiceWithNoBindings_ServiceDesc, srv)
 }
 
-func _AnotherServiceWithNoBindings_NoBindings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AnotherServiceWithNoBindings_NoBindings_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -1317,7 +1317,7 @@ func _AnotherServiceWithNoBindings_NoBindings_Handler(srv interface{}, ctx conte
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.AnotherServiceWithNoBindings/NoBindings",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(AnotherServiceWithNoBindingsServer).NoBindings(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
@@ -1389,7 +1389,7 @@ func RegisterSnakeEnumServiceServer(s grpc.ServiceRegistrar, srv SnakeEnumServic
 	s.RegisterService(&SnakeEnumService_ServiceDesc, srv)
 }
 
-func _SnakeEnumService_SnakeEnum_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _SnakeEnumService_SnakeEnum_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SnakeEnumRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -1401,7 +1401,7 @@ func _SnakeEnumService_SnakeEnum_Handler(srv interface{}, ctx context.Context, d
 		Server:     srv,
 		FullMethod: "/grpc.gateway.examples.internal.proto.examplepb.SnakeEnumService/SnakeEnum",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(SnakeEnumServiceServer).SnakeEnum(ctx, req.(*SnakeEnumRequest))
 	}
 	return interceptor(ctx, in, info, handler)

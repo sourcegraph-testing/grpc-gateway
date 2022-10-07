@@ -175,7 +175,7 @@ func file_examples_internal_proto_oneofenum_oneof_enum_proto_rawDescGZIP() []byt
 
 var file_examples_internal_proto_oneofenum_oneof_enum_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_examples_internal_proto_oneofenum_oneof_enum_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_examples_internal_proto_oneofenum_oneof_enum_proto_goTypes = []interface{}{
+var file_examples_internal_proto_oneofenum_oneof_enum_proto_goTypes = []any{
 	(ExampleEnum)(0),         // 0: grpc.gateway.examples.internal.proto.oneofenum.ExampleEnum
 	(*OneofEnumMessage)(nil), // 1: grpc.gateway.examples.internal.proto.oneofenum.OneofEnumMessage
 }
@@ -194,7 +194,7 @@ func file_examples_internal_proto_oneofenum_oneof_enum_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_examples_internal_proto_oneofenum_oneof_enum_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_examples_internal_proto_oneofenum_oneof_enum_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*OneofEnumMessage); i {
 			case 0:
 				return &v.state
@@ -207,7 +207,7 @@ func file_examples_internal_proto_oneofenum_oneof_enum_proto_init() {
 			}
 		}
 	}
-	file_examples_internal_proto_oneofenum_oneof_enum_proto_msgTypes[0].OneofWrappers = []interface{}{
+	file_examples_internal_proto_oneofenum_oneof_enum_proto_msgTypes[0].OneofWrappers = []any{
 		(*OneofEnumMessage_ExampleEnum)(nil),
 	}
 	type x struct{}

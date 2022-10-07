@@ -1044,7 +1044,7 @@ func TestABEPatchBody(t *testing.T) {
 
 // mustMarshal marshals the given object into a json string, calling t.Fatal if an error occurs. Useful in testing to
 // inline marshalling whenever you don't expect the marshalling to return an error
-func mustMarshal(t *testing.T, i interface{}) string {
+func mustMarshal(t *testing.T, i any) string {
 	b, err := marshaler.Marshal(i)
 	if err != nil {
 		t.Fatalf("failed to marshal %#v: %v", i, err)
@@ -1186,8 +1186,8 @@ func testABEList(t *testing.T, port int) {
 	var i int
 	for i = 0; ; i++ {
 		var item struct {
-			Result json.RawMessage        `json:"result"`
-			Error  map[string]interface{} `json:"error"`
+			Result json.RawMessage `json:"result"`
+			Error  map[string]any  `json:"error"`
 		}
 		err := dec.Decode(&item)
 		if err == io.EOF {
@@ -1299,8 +1299,8 @@ func testABEBulkEcho(t *testing.T, port int) {
 		dec := marshaler.NewDecoder(resp.Body)
 		for i := 0; ; i++ {
 			var item struct {
-				Result json.RawMessage        `json:"result"`
-				Error  map[string]interface{} `json:"error"`
+				Result json.RawMessage `json:"result"`
+				Error  map[string]any  `json:"error"`
 			}
 			err := dec.Decode(&item)
 			if err == io.EOF {
@@ -1348,8 +1348,8 @@ func testABEBulkEchoZeroLength(t *testing.T, port int) {
 
 	dec := marshaler.NewDecoder(resp.Body)
 	var item struct {
-		Result json.RawMessage        `json:"result"`
-		Error  map[string]interface{} `json:"error"`
+		Result json.RawMessage `json:"result"`
+		Error  map[string]any  `json:"error"`
 	}
 	if err := dec.Decode(&item); err == nil {
 		t.Errorf("dec.Decode(&item) succeeded; want io.EOF; item = %#v", item)

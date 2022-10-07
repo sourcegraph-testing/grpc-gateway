@@ -179,7 +179,7 @@ var file_protoc_gen_openapiv2_options_annotations_proto_rawDesc = []byte{
 	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
-var file_protoc_gen_openapiv2_options_annotations_proto_goTypes = []interface{}{
+var file_protoc_gen_openapiv2_options_annotations_proto_goTypes = []any{
 	(*descriptorpb.FileOptions)(nil),    // 0: google.protobuf.FileOptions
 	(*descriptorpb.MethodOptions)(nil),  // 1: google.protobuf.MethodOptions
 	(*descriptorpb.MessageOptions)(nil), // 2: google.protobuf.MessageOptions

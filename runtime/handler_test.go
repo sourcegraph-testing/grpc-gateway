@@ -20,7 +20,7 @@ type fakeReponseBodyWrapper struct {
 }
 
 // XXX_ResponseBody returns id of SimpleMessage
-func (r fakeReponseBodyWrapper) XXX_ResponseBody() interface{} {
+func (r fakeReponseBodyWrapper) XXX_ResponseBody() any {
 	resp := r.Message.(*pb.SimpleMessage)
 	return resp.Id
 }
@@ -146,9 +146,9 @@ func TestForwardResponseStream(t *testing.T) {
 						t.Errorf("stream responseBody failed %v", err)
 					}
 
-					b, err = marshaler.Marshal(map[string]interface{}{"result": rb.XXX_ResponseBody()})
+					b, err = marshaler.Marshal(map[string]any{"result": rb.XXX_ResponseBody()})
 				} else {
-					b, err = marshaler.Marshal(map[string]interface{}{"result": msg.pb})
+					b, err = marshaler.Marshal(map[string]any{"result": msg.pb})
 				}
 
 				if err != nil {
@@ -170,11 +170,11 @@ type CustomMarshaler struct {
 	m *runtime.JSONPb
 }
 
-func (c *CustomMarshaler) Marshal(v interface{}) ([]byte, error)      { return c.m.Marshal(v) }
-func (c *CustomMarshaler) Unmarshal(data []byte, v interface{}) error { return c.m.Unmarshal(data, v) }
-func (c *CustomMarshaler) NewDecoder(r io.Reader) runtime.Decoder     { return c.m.NewDecoder(r) }
-func (c *CustomMarshaler) NewEncoder(w io.Writer) runtime.Encoder     { return c.m.NewEncoder(w) }
-func (c *CustomMarshaler) ContentType(v interface{}) string           { return "Custom-Content-Type" }
+func (c *CustomMarshaler) Marshal(v any) ([]byte, error)          { return c.m.Marshal(v) }
+func (c *CustomMarshaler) Unmarshal(data []byte, v any) error     { return c.m.Unmarshal(data, v) }
+func (c *CustomMarshaler) NewDecoder(r io.Reader) runtime.Decoder { return c.m.NewDecoder(r) }
+func (c *CustomMarshaler) NewEncoder(w io.Writer) runtime.Encoder { return c.m.NewEncoder(w) }
+func (c *CustomMarshaler) ContentType(v any) string               { return "Custom-Content-Type" }
 
 func TestForwardResponseStreamCustomMarshaler(t *testing.T) {
 	type msg struct {

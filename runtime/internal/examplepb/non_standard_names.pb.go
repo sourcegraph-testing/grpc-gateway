@@ -719,7 +719,7 @@ func file_runtime_internal_examplepb_non_standard_names_proto_rawDescGZIP() []by
 }
 
 var file_runtime_internal_examplepb_non_standard_names_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
-var file_runtime_internal_examplepb_non_standard_names_proto_goTypes = []interface{}{
+var file_runtime_internal_examplepb_non_standard_names_proto_goTypes = []any{
 	(*NonStandardMessage)(nil),                             // 0: grpc.gateway.runtime.internal.examplepb.NonStandardMessage
 	(*NonStandardUpdateRequest)(nil),                       // 1: grpc.gateway.runtime.internal.examplepb.NonStandardUpdateRequest
 	(*NonStandardMessageWithJSONNames)(nil),                // 2: grpc.gateway.runtime.internal.examplepb.NonStandardMessageWithJSONNames
@@ -762,7 +762,7 @@ func file_runtime_internal_examplepb_non_standard_names_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*NonStandardMessage); i {
 			case 0:
 				return &v.state
@@ -774,7 +774,7 @@ func file_runtime_internal_examplepb_non_standard_names_proto_init() {
 				return nil
 			}
 		}
-		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*NonStandardUpdateRequest); i {
 			case 0:
 				return &v.state
@@ -786,7 +786,7 @@ func file_runtime_internal_examplepb_non_standard_names_proto_init() {
 				return nil
 			}
 		}
-		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*NonStandardMessageWithJSONNames); i {
 			case 0:
 				return &v.state
@@ -798,7 +798,7 @@ func file_runtime_internal_examplepb_non_standard_names_proto_init() {
 				return nil
 			}
 		}
-		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*NonStandardWithJSONNamesUpdateRequest); i {
 			case 0:
 				return &v.state
@@ -810,7 +810,7 @@ func file_runtime_internal_examplepb_non_standard_names_proto_init() {
 				return nil
 			}
 		}
-		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*NonStandardMessage_Thing); i {
 			case 0:
 				return &v.state
@@ -822,7 +822,7 @@ func file_runtime_internal_examplepb_non_standard_names_proto_init() {
 				return nil
 			}
 		}
-		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*NonStandardMessage_Thing_SubThing); i {
 			case 0:
 				return &v.state
@@ -834,7 +834,7 @@ func file_runtime_internal_examplepb_non_standard_names_proto_init() {
 				return nil
 			}
 		}
-		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*NonStandardMessageWithJSONNames_Thing); i {
 			case 0:
 				return &v.state
@@ -846,7 +846,7 @@ func file_runtime_internal_examplepb_non_standard_names_proto_init() {
 				return nil
 			}
 		}
-		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_runtime_internal_examplepb_non_standard_names_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*NonStandardMessageWithJSONNames_Thing_SubThing); i {
 			case 0:
 				return &v.state
