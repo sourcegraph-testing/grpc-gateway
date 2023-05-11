@@ -31,3 +31,4 @@ $ gulp serve
 ```
 
 then, open `http://localhost:8000` with your browser.
+Hello World

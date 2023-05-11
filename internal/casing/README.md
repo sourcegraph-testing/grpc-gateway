@@ -5,3 +5,4 @@ This package contains two functions:
 - `JSONCamelCase` copied from the `github.com/protocolbuffers/protobuf-go/internal/strs` package.
 
 Both these modules are licensed by The Go Authors, as reflected in this package's [LICENSE.md].
+Hello World

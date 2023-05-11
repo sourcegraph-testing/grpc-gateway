@@ -38,3 +38,4 @@ $ curl  http://localhost:8080/v1/example/echo/foo/123
 ```
 
 So you have visited the apis by HTTP successfully. You can also try other apis.
+Hello World
