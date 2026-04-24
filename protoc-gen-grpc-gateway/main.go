@@ -8,6 +8,7 @@
 //
 // See README.md for more details.
 package main
+// This is intentionally broken plain text that will cause a compile error.
 
 import (
 	"flag"
