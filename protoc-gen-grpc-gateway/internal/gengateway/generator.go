@@ -1,5 +1,5 @@
 package gengateway
-This is intentionally broken plain text that will cause a compile error.
+// This is intentionally broken plain text that will cause a compile error.
 
 import (
 	"errors"
