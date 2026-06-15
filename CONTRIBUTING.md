@@ -1,5 +1,45 @@
 # How to contribute
 
+## Getting started
+
+This repository is a Go project that can be built and tested with either the
+standard Go toolchain or with [Bazel](https://bazel.build) (the version pinned
+in `.bazelversion`, currently `5.3.0`).
+
+Prerequisites:
+
+- Go (matching the version in `go.mod`; CI tests against Go 1.17, 1.18 and 1.19).
+- Optionally, Bazel, if you want to reproduce the Bazel-based CI checks.
+- Optionally, [`buf`](https://buf.build) if you want to regenerate protobuf code
+  (`make install` will install a pinned version into `$GOBIN`).
+
+Common workflows (run from the repository root):
+
+```sh
+# Build everything with the Go toolchain.
+go build ./...
+
+# Run the unit tests.
+go test ./...
+
+# Run the test target used by the Makefile, including the integration tests.
+make test
+
+# Build and test everything with Bazel (matches the Bazel CI job).
+bazel build //...
+bazel test //...
+
+# Keep Bazel BUILD files and repositories.bzl in sync after Go changes.
+bazel run //:gazelle
+bazel run //:gazelle -- update-repos -from_file=go.mod -to_macro=repositories.bzl%go_repositories
+bazel run //:buildifier
+```
+
+If you change `.proto` files or other generated inputs, regenerate the
+checked-in artifacts by following the steps in
+[I want to regenerate the files after making changes](#i-want-to-regenerate-the-files-after-making-changes)
+below, then commit the resulting diff.
+
 ## Code reviews
 
 All submissions, including submissions by project members, require review.
