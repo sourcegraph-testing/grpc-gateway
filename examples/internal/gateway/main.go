@@ -2,6 +2,7 @@ package gateway
 
 import (
 	"context"
+	"errors"
 	"net/http"
 
 	"github.com/golang/glog"
@@ -69,7 +70,7 @@ func Run(ctx context.Context, opts Options) error {
 	}()
 
 	glog.Infof("Starting listening at %s", opts.Addr)
-	if err := s.ListenAndServe(); err != http.ErrServerClosed {
+	if err := s.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
 		glog.Errorf("Failed to listen and serve: %v", err)
 		return err
 	}

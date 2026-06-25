@@ -309,7 +309,7 @@ func (g *generator) Generate(targets []*descriptor.File) ([]*descriptor.Response
 	for _, file := range targets {
 		glog.V(1).Infof("Processing %s", file.GetName())
 		swagger, err := applyTemplate(param{File: file, reg: g.reg})
-		if err == errNoTargetService {
+		if errors.Is(err, errNoTargetService) {
 			glog.V(1).Infof("%s: %v", file.GetName(), err)
 			continue
 		}

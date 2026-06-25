@@ -2,6 +2,7 @@ package server
 
 import (
 	"context"
+	"errors"
 	"net"
 	"net/http"
 
@@ -70,7 +71,7 @@ func RunInProcessGateway(ctx context.Context, addr string, opts ...runtime.Serve
 		}
 	}()
 
-	if err := s.ListenAndServe(); err != http.ErrServerClosed {
+	if err := s.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
 		glog.Errorf("Failed to listen and serve: %v", err)
 		return err
 	}
