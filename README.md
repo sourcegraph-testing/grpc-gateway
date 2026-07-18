@@ -609,3 +609,5 @@ See [CONTRIBUTING.md](http://github.com/grpc-ecosystem/grpc-gateway/blob/master/
 
 gRPC-Gateway is licensed under the BSD 3-Clause License.
 See [LICENSE.txt](https://github.com/grpc-ecosystem/grpc-gateway/blob/master/LICENSE.txt) for more details.
+
+<!-- touched by batch-change-agent smoke test v2 -->
