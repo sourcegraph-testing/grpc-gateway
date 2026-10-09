@@ -3,7 +3,7 @@ package descriptor
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"os"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/descriptor/openapiconfig"
 	"google.golang.org/protobuf/encoding/protojson"
@@ -51,7 +51,7 @@ func registerOpenAPIOptions(registry *Registry, openAPIConfig *openapiconfig.Ope
 // and registers the OpenAPI options the given registry.
 // This must be done after loading the proto file.
 func (r *Registry) LoadOpenAPIConfigFromYAML(yamlFile string) error {
-	yamlFileContents, err := ioutil.ReadFile(yamlFile)
+	yamlFileContents, err := os.ReadFile(yamlFile)
 	if err != nil {
 		return fmt.Errorf("failed to read OpenAPI Configuration description from '%v': %v", yamlFile, err)
 	}
